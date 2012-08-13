@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <table Name="config">
+        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Value" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <table Name="register">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="UserName" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Password" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Email" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Key" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Time" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <data table="config">
+        <row>
+            <Name>MAIL_MODE</Name>
+            <Value>SMTP</Value>
+        </row>
+        <row>
+            <Name>SMTP_USERNAME</Name>
+            <Value></Value>
+        </row>
+        <row>
+            <Name>SMTP_PASSWORD</Name>
+            <Value></Value>
+        </row>
+        <row>
+            <Name>SMTP_FROMMAIL</Name>
+            <Value></Value>
+        </row>
+        <row>
+            <Name>SMTP_FROMNAME</Name>
+            <Value>Loot Manager</Value>
+        </row>
+        <row>
+            <Name>SMTP_HOST</Name>
+            <Value></Value>
+        </row>
+        <row>
+            <Name>GUILD_NAME</Name>
+            <Value></Value>
+        </row>
+        <row>
+            <Name>RECAPTCHA_PUB_KEY</Name>
+            <Value></Value>
+        </row>
+        <row>
+            <Name>RECAPTCHA_PRIV_KEY</Name>
+            <Value></Value>
+        </row>
+    </data>
+    <table Name="menue_links">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Path" Type="varchar(256)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Order" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Right" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <data table="rights">
+        <row>
+            <name>show_loot_list</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>show_progress</name>
+            <Group>PROGRESS</Group>
+        </row>
+        <row>
+            <name>register</name>
+            <group>LOGIN</group>
+        </row>
+        <row>
+            <name>edit_config</name>
+            <group>SYSTEM</group>
+        </row>
+        <row>
+            <name>edit_menue_link</name>
+            <group>MENUE-LINKS</group>
+        </row>
+    </data>
+</root>

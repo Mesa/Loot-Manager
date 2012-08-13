@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <create_file File_Path="../../mysql.ini"><![CDATA[
+host="{MYSQL_HOST}"
+port="{MYSQL_PORT}"
+shema="{MYSQL_SHEMA}"
+username="{MYSQL_USERNAME}"
+password="{MYSQL_PASSWORD}"
+
+]]></create_file>
+    <table Name="blacklist">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="ip" Type="varchar(24)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="locked_until" Type="int(24)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="login_try" Type="int(24)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="last_try" Type="int(24)" Null="YES" Key="" Default="" Extra="" />
+    </table>
+    <table Name="groups">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(45)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <table Name="rights">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Description" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Group" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <table Name="user">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="UserName" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Password" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Name" Type="varchar(45)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Email" Type="varchar(45)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="lastLogin" Type="int(45)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="registered_since" Type="int(45)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="status" Type="int(2)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="token" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <table Name="v_group_rights">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="GroupId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="RightId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <table Name="v_user_groups">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="GroupId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="UserId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <data table="v_user_groups">
+        <row>
+            <Id>1</Id>
+            <GroupId>1</GroupId>
+            <UserId>2</UserId>
+        </row>
+    </data>
+    <data table="rights">
+        <row>
+            <name>loot_edit_char</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_delete_char</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_create_char</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_move_char</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_view_admin_menu</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_kill_king</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>profil_view</name>
+            <Group>PROFIL</Group>
+        </row>
+        <row>
+            <name>profil_change_username_and_password</name>
+            <Group>PROFIL</Group>
+        </row>
+        <row>
+            <name>rights_edit_user_rights</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>rights_edit_group_rights</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>loot_add_char_to_event</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_remove_char_from_event</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>admin_delete_user</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>admin_edit_user</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>admin_create_user</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>admin_add_remove_user_to_group</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>admin_create_group</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>admin_delete_group</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>admin_edit_group</name>
+            <Group>MANAGE_USER</Group>
+        </row>
+        <row>
+            <name>loot_create_event</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_edit_event</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>loot_delete_event</name>
+            <Group>LOOT_LIST</Group>
+        </row>
+        <row>
+            <name>edit_rooster_data</name>
+            <Group>ROOSTER</Group>
+        </row>
+        <row>
+            <name>edit_news</name>
+            <Group>NEWS</Group>
+        </row>
+        <row>
+            <name>edit_rooster_config</name>
+            <Group>ROOSTER</Group>
+        </row>
+        <row>
+            <name>run_system_update</name>
+            <Group>SYSTEM</Group>
+        </row>
+        <row>
+            <name>progress_edit</name>
+            <Group>PROGRESS</Group>
+        </row>
+        <row>
+            <name>login</name>
+            <Group>LOGIN</Group>
+        </row>
+        <row>
+            <name>admin_access_dashboard</name>
+            <Group>ADMIN_DASHBOARD</Group>
+        </row>
+        <row>
+            <name>edit_menue_link</name>
+            <Group>MENUE-LINKS</Group>
+        </row>
+    </data>
+    <data table="user">
+        <row>
+            <Id>1</Id>
+            <UserName>Guest</UserName>
+            <Password>1</Password>
+            <Name>Guest</Name>
+        </row>
+        <row>
+            <Id>2</Id>
+            <UserName>{ACCOUNT_NAME}</UserName>
+            <Password>{ACCOUNT_PASSWORD}</Password>
+            <Name>Administrator</Name>
+        </row>
+    </data>
+    <table Name="Encounter">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Dungeon" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Status" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="KillDate" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="Order" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+    </table>
+    <data table="Encounter">
+        <row>
+            <Id>1</Id>
+            <Name>Duke Letareus</Name>
+            <Dungeon>1</Dungeon>
+            <Order>0</Order>
+        </row>
+        <row>
+            <Id>2</Id>
+            <Name>Prinz Hylas</Name>
+            <Dungeon>1</Dungeon>
+            <Order>1</Order>
+        </row>
+        <row>
+            <Id>3</Id>
+            <Name>Oracle Aleria</Name>
+            <Dungeon>1</Dungeon>
+            <Order>2</Order>
+        </row>
+        <row>
+            <Id>4</Id>
+            <Name>Infiltrator Johlen</Name>
+            <Dungeon>1</Dungeon>
+            <Order>3</Order>
+        </row>
+        <row>
+            <Id>5</Id>
+            <Name>Lord Greenscale</Name>
+            <Dungeon>1</Dungeon>
+            <Order>4</Order>
+        </row>
+        <row>
+            <Id>6</Id>
+            <Name>Dunkler Fokus</Name>
+            <Dungeon>2</Dungeon>
+            <Order>1</Order>
+        </row>
+        <row>
+            <Id>7</Id>
+            <Name>Kriegsmeister Galenir</Name>
+            <Dungeon>2</Dungeon>
+            <Order>2</Order>
+        </row>
+        <row>
+            <Id>8</Id>
+            <Name>Herald Gaurath</Name>
+            <Dungeon>2</Dungeon>
+            <Order>3</Order>
+        </row>
+        <row>
+            <Id>9</Id>
+            <Name>Plutonus der Unsterbliche</Name>
+            <Dungeon>2</Dungeon>
+            <Order>4</Order>
+        </row>
+        <row>
+            <Id>10</Id>
+            <Name>Alsbeth die Streitsuchende</Name>
+            <Dungeon>2</Dungeon>
+            <Order>5</Order>
+        </row>
+        <row>
+            <Name>Uruuluk</Name>
+            <Dungeon>4</Dungeon>
+            <Order>1</Order>
+        </row>
+        <row>
+            <Name>Thalguur</Name>
+            <Dungeon>4</Dungeon>
+            <Order>2</Order>
+        </row>
+        <row>
+            <Name>Guurloth</Name>
+            <Dungeon>4</Dungeon>
+            <Order>3</Order>
+        </row>
+        <row>
+            <Name>Anrak the Foul</Name>
+            <Dungeon>4</Dungeon>
+            <Order>4</Order>
+        </row>
+        <row>
+            <Name>Jorb</Name>
+            <Dungeon>5</Dungeon>
+            <Order>1</Order>
+        </row>
+        <row>
+            <Name>Ragetide</Name>
+            <Dungeon>5</Dungeon>
+            <Order>2</Order>
+        </row>
+        <row>
+            <Name>Isskal</Name>
+            <Dungeon>5</Dungeon>
+            <Order>3</Order>
+        </row>
+        <row>
+            <Name>Hydriss</Name>
+            <Dungeon>5</Dungeon>
+            <Order>4</Order>
+        </row>
+        <row>
+            <Name>Murdantix</Name>
+            <Dungeon>3</Dungeon>
+            <Order>1</Order>
+        </row>
+        <row>
+            <Name>Soulrender Zilas</Name>
+            <Dungeon>3</Dungeon>
+            <Order>2</Order>
+        </row>
+        <row>
+            <Name>Vladmal Prime</Name>
+            <Dungeon>3</Dungeon>
+            <Order>3</Order>
+        </row>
+        <row>
+            <Name>Grugonim</Name>
+            <Dungeon>3</Dungeon>
+            <Order>4</Order>
+        </row>
+        <row>
+            <Name>Rune King Molinar</Name>
+            <Dungeon>3</Dungeon>
+            <Order>5</Order>
+        </row>
+        <row>
+            <Name>Estrode</Name>
+            <Dungeon>3</Dungeon>
+            <Order>6</Order>
+        </row>
+        <row>
+            <Name>Matron Zamira</Name>
+            <Dungeon>3</Dungeon>
+            <Order>7</Order>
+        </row>
+        <row>
+            <Name>Sicaron</Name>
+            <Dungeon>3</Dungeon>
+            <Order>8</Order>
+        </row>
+        <row>
+            <Name>Inquisitor Garau</Name>
+            <Dungeon>3</Dungeon>
+            <Order>9</Order>
+        </row>
+        <row>
+            <Name>Inwar Darktide</Name>
+            <Dungeon>3</Dungeon>
+            <Order>10</Order>
+        </row>
+        <row>
+            <Name>Jornaru and Akylios</Name>
+            <Dungeon>3</Dungeon>
+            <Order>11</Order>
+        </row>
+    </data>
+    <table Name="Dungeon">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Order" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="Status" Type="int(1)" Null="YES" Key="" Default="" Extra="" />
+    </table>
+    <data table="Dungeon">
+        <row>
+            <Id>1</Id>
+            <Name>Grünschuppe</Name>
+            <Order>3</Order>
+        </row>
+        <row>
+            <Id>2</Id>
+            <Name>Seelenfluss</Name>
+            <Order>4</Order>
+        </row>
+        <row>
+            <Id>3</Id>
+            <Name>Hammerhall</Name>
+            <Order>5</Order>
+        </row>
+        <row>
+            <Id>4</Id>
+            <Name>Güldene Prophezeihung</Name>
+            <Order>1</Order>
+        </row>
+        <row>
+            <Id>5</Id>
+            <Name>Überflutete Hallen</Name>
+            <Order>2</Order>
+        </row>
+    </data>
+    <table Name="chars">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(45)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Class" Type="varchar(45)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="GuildRankId" Type="int(1)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="level" Type="int(1)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="Description" Type="varchar(64)" Null="YES" Key="" Default="" Extra="" />
+    </table>
+    <data table="groups">
+        <row>
+            <Name>Administratoren</Name>
+        </row>
+        <row>
+            <Name>Benutzer</Name>
+        </row>
+    </data>
+    <table Name="news">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="headline" Type="varchar(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="content" Type="LONGTEXT" Null="YES" Key="" Default="" Extra="" />
+        <field Name="date" Type="int(32)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="author" Type="int(32)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="show_from" Type="int(32)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="show_until" Type="int(32)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="type" Type="int(32)" Null="YES" Key="" Default="" Extra="" />
+    </table>
+    <table Name="v_user_rights">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="RightId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="UserId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <sql><![CDATA[INSERT INTO `v_user_rights` (`RightId`, `UserId`) SELECT `rights`.`Id`, 2 FROM `rights`]]></sql>
+    <data table="news">
+        <row>
+            <Id>1</Id>
+            <headline>Welcome to Admin</headline>
+            <content>Welcome to Mesas Loot Manager.</content>
+            <author>2</author>
+            <show_from>0</show_from>
+            <show_until>2147468400</show_until>
+            <type>1</type>
+        </row>
+        <row>
+            <Id>2</Id>
+            <headline>Ich bin dein neuer Loot-Manager</headline>
+            <content>Herzlich Willkommen auf deinem neuen Loot-Manager. Wir beide werden viel Spaß zusammen haben.</content>
+            <author>2</author>
+            <show_from>0</show_from>
+            <show_until>2147468400</show_until>
+            <type>2</type>
+        </row>
+    </data>
+    <table Name="guild_ranks">
+        <field Name="Id" Type="Int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="DisplayOrder" Type="int(64)" Null="NO" Key="" Default="0" Extra="" />
+        <field Name="display" Type="int(1)" Null="YES" Key="" Default="0" Extra="" />
+    </table>
+    <table Name="events">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(45)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <table Name="lootorder">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="EventId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="CharId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Position" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="lastLoot" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+    </table>
+    <table Name="loot_log">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="EventId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="CharId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="FromPosition" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="ToPosition" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="Time" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="AdminId" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Desc" Type="varchar(256)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="Type" Type="varchar(64)" Null="YES" Key="" Default="" Extra="" />
+    </table>
+    <create_file File_Path="../../index.php"><![CDATA[<?php
+/**
+ *
+ * Php version 5.3
+ *
+ * @category index
+ * @package  Loot_Manager
+ * @author   Mesa <daniel.langemann@gmx.de>
+ * @link     http://www.loot-manager.com
+ */
+namespace JackAssPHP;
+/**
+ * Define the root path to JackAss
+ */
+define("DS", DIRECTORY_SEPARATOR);
+define("ROOT", __DIR__ . DS);
+/**
+ * In Production mode, no errors will be displayed.
+ */
+if ( $_SERVER['REMOTE_ADDR'] == "127.0.0.1") {
+    define("PRODUCTION_USE", false);
+} else {
+    define("PRODUCTION_USE", true);
+}
+
+
+require 'JackAssPHP/Core/JackAss.php';]]>
+    </create_file>
+    <create_file File_Path="../../.htaccess"><![CDATA[
+RewriteEngine On
+RewriteRule !\.(ico)$ index.php [L]
+
+# Hide files wich should not be serverd by the server
+<Files *.sql>
+    deny from all
+</Files>
+
+<Files *.txt>
+    deny from all
+</Files>
+
+<Files *.xml>
+    deny from all
+</Files>
+
+<Files autoloader.php>
+    deny from all
+</Files>
+]]>
+    </create_file>
+    <delete_file File_Path="temp_install.xml" />
+</root>

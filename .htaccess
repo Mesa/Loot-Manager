@@ -1,0 +1,22 @@
+
+RewriteEngine On
+RewriteRule !\.(ico)$ index.php [L]
+
+# Hide files wich should not be serverd by the server
+<Files *.sql>
+    deny from all
+</Files>
+
+<Files *.txt>
+    deny from all
+</Files>
+
+<Files *.xml>
+    deny from all
+</Files>
+
+<Files autoloader.php>
+    deny from all
+</Files>
+
+    

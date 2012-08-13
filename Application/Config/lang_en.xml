@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+    <chunk>
+        <key>SAVE</key>
+        <string>Save</string>
+    </chunk>
+    <chunk>
+        <key>LOGIN</key>
+        <string>Login</string>
+    </chunk>
+    <chunk>
+        <key>USERNAME</key>
+        <string>Username</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD</key>
+        <string>Password</string>
+    </chunk>
+    <chunk>
+        <key>CLASS</key>
+        <string>Class</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_CHAR</key>
+        <string>Edit character</string>
+    </chunk>
+    <chunk>
+        <key>STAY_LOGGED_IN</key>
+        <string>Stay logged in</string>
+    </chunk>
+    <chunk>
+        <key>WRONG_USERNAME_OR_PASSWORD</key>
+        <string>wrong username or password</string>
+    </chunk>
+    <chunk>
+        <key>HOME</key>
+        <string>Home</string>
+    </chunk>
+    <chunk>
+        <key>LOG</key>
+        <string>Log</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_LIST</key>
+        <string>Loot list</string>
+    </chunk>
+    <chunk>
+        <key>ITEM_RECIEVED</key>
+        <string>Item recieved</string>
+    </chunk>
+    <chunk>
+        <key>VIEW_PROFIL</key>
+        <string>View Profil</string>
+    </chunk>
+    <chunk>
+        <key>UPDATE</key>
+        <string>Update</string>
+    </chunk>
+    <chunk>
+        <key>SYSTEM</key>
+        <string>System</string>
+    </chunk>
+    <chunk>
+        <key>RUN_SYSTEM_UPDATE</key>
+        <string>Run system update</string>
+    </chunk>
+    <chunk>
+        <key>PROGRESS</key>
+        <string>Progress</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_PROGRESS</key>
+        <string>Edit Progress</string>
+    </chunk>
+    <chunk>
+        <key>TRASH</key>
+        <string>Trash</string>
+    </chunk>
+    <chunk>
+        <key>CLEAR</key>
+        <string>clear</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_DUNGEON</key>
+        <string>create Dungeon</string>
+    </chunk>
+    <chunk>
+        <key>ROOSTER</key>
+        <string>Rooster</string>
+    </chunk>
+    <chunk>
+        <key>ROOSTER</key>
+        <string>Mitgliederliste</string>
+    </chunk>
+    <chunk>
+        <key>LOG_OUT</key>
+        <string>Log out</string>
+    </chunk>
+    <chunk>
+        <key>RIGHTS</key>
+        <string>rights</string>
+    </chunk>
+    <chunk>
+        <key>MANAGE_USER</key>
+        <string>Manage User</string>
+    </chunk>
+    <chunk>
+        <key>GROUPS</key>
+        <string>Groups</string>
+    </chunk>
+    <chunk>
+        <key>GROUP</key>
+        <string>Group</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD_TO_SHORT</key>
+        <string>The password is to short</string>
+    </chunk>
+    <chunk>
+        <key>LETTERS</key>
+        <string>Letters</string>
+    </chunk>
+    <chunk>
+        <key>NO_PASSWORD_CHANGE</key>
+        <string>The password wont change</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_GROUP</key>
+        <string>Create Group</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_GROUP</key>
+        <string>Delete Group</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_USER</key>
+        <string>Delete User</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_USER</key>
+        <string>Create User</string>
+    </chunk>
+    <chunk>
+        <key>CANCEL</key>
+        <string>Cancel</string>
+    </chunk>
+    <chunk>
+        <key>ALL_GROUPS</key>
+        <string>All Groups</string>
+    </chunk>
+    <chunk>
+        <key>CREATE</key>
+        <string>Create</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_USER</key>
+        <string>Create new User</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_GROUP</key>
+        <string>Create new Group</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_DASHBOARD</key>
+        <string>Admin Dashboard</string>
+    </chunk>
+    <chunk>
+        <key>DESCRIPTION</key>
+        <string>Descritpion</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_EVENT</key>
+        <string>Edit Event</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_EVENT</key>
+        <string>Delete Event</string>
+    </chunk>
+    <chunk>
+        <key>LAST_LOOT</key>
+        <string>Last Loot</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_CHAR</key>
+        <string>Create new Player</string>
+    </chunk>
+    <chunk>
+        <key>POSITION</key>
+        <string>Position</string>
+    </chunk>
+    <chunk>
+        <key>EVENT</key>
+        <string>Event</string>
+    </chunk>
+    <chunk>
+        <key>NAME</key>
+        <string>Name</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_EVENT</key>
+        <string>Create a new Event</string>
+    </chunk>
+    <chunk>
+        <key>REMOVE</key>
+        <string>Remove</string>
+    </chunk>
+    <chunk>
+        <key>DELETE</key>
+        <string>Delete</string>
+    </chunk>
+    <chunk>
+        <key>MISSING_PLAYER</key>
+        <string>Missing Player</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_EVENT_QUESTION</key>
+        <string>Delete this Event? This Action could not be reversed</string>
+    </chunk>
+    <chunk>
+        <key>UPLOAD</key>
+        <string>Upload</string>
+    </chunk>
+    <chunk>
+        <key>CONFIGURATION</key>
+        <string>Configuration</string>
+    </chunk>
+    <chunk>
+        <key>EDIT</key>
+        <string>Edit</string>
+    </chunk>
+    <chunk>
+        <key>NEWS</key>
+        <string>News</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_NEWS</key>
+        <string>Edit News</string>
+    </chunk>
+    <chunk>
+        <key>ADD_CHAR</key>
+        <string>Add Character</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_CHAR</key>
+        <string>Delete Char</string>
+    </chunk>
+    <chunk>
+        <key>GROUP_MANAGEMENT_DESCRIPTION</key>
+        <string>_</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_USER</key>
+        <string>Edit User</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_EVENT</key>
+        <string>Create Event</string>
+    </chunk>
+    <chunk>
+        <key>ADD_TO_GROUP</key>
+        <string>Add to group</string>
+    </chunk>
+    <chunk>
+        <key>SHOW_ADMIN_MENU</key>
+        <string>Show Admin menu</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_GROUP</key>
+        <string>Edit group</string>
+    </chunk>
+    <chunk>
+        <key>REMOVE_CHARACTER</key>
+        <string>Remove Character</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_CONFIG</key>
+        <string>Edit Config</string>
+    </chunk>
+    <chunk>
+        <key>USER</key>
+        <string>User</string>
+    </chunk>
+    <chunk>
+        <key>CHANGE_CHAR_POSITION</key>
+        <string>Change char position</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_ROOSTER_DATA</key>
+        <string>Edit Member Rooster</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_USER_QUESTION</key>
+        <string>Delete this User? This Action can not be undone.</string>
+    </chunk>
+    <chunk>
+        <key>SHOWN_NAME</key>
+        <string>Shown name</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_ENCOUNTER</key>
+        <string>Create encounter</string>
+    </chunk>
+    <chunk>
+        <key>PROFIL</key>
+        <string>Profil</string>
+    </chunk>
+    <chunk>
+        <key>Register</key>
+        <string>Register</string>
+    </chunk>
+    <chunk>
+        <key>ALL_USER</key>
+        <string>All users</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_GROUP_QUESTION</key>
+        <string>Delete this group? This action cannot be undone.</string>
+    </chunk>
+    <chunk>
+        <key>INSUFFICIENT_RIGHTS</key>
+        <string>insufficient_rights</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_MOVED</key>
+        <string>Char moved</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_REMOVED_FROM_EVENT</key>
+        <string>Removed from Event</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_ADDED_TO_EVENT</key>
+        <string>Added to Event</string>
+    </chunk>
+    <chunk>
+        <key>ALL</key>
+        <string>All</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_ADDED</key>
+        <string>Char added</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_REMOVED</key>
+        <string>Char removed</string>
+    </chunk>
+    <chunk>
+        <key>COUNT</key>
+        <string>Count</string>
+    </chunk>
+    <chunk>
+        <key>RELOAD</key>
+        <string>Reload</string>
+    </chunk>
+    <chunk>
+        <key>GUEST_ACCOUNT</key>
+        <string>Guest Account</string>
+    </chunk>
+    <chunk>
+        <key>MENUE-LINKS</key>
+        <string>Menu Links</string>
+    </chunk>
+    <chunk>
+        <key>PATH</key>
+        <string>Path</string>
+    </chunk>
+    <chunk>
+        <key>ADD</key>
+        <string>Add</string>
+    </chunk>
+    <chunk>
+        <key>submit</key>
+        <string>Submit</string>
+    </chunk>
+    <chunk>
+        <key>RETYPE_PASSWORD</key>
+        <string>Retype Password</string>
+    </chunk>
+    <chunk>
+        <key>CHANGE</key>
+        <string>Change</string>
+    </chunk>
+    <chunk>
+        <key>NO_RIGHTS_NEEDED</key>
+        <string>No rights needed</string>
+    </chunk>
+    <chunk>
+        <key>ITEMS_RECIEVED</key>
+        <string>Items recieved</string>
+    </chunk>
+    <chunk>
+        <key>ADDED_AGO</key>
+        <string>Added ago</string>
+    </chunk>
+    <chunk>
+        <key>GUILD_NAME</key>
+        <string>Guild name</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_PASSWORD</key>
+        <string>SMTP Password</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_USERNAME</key>
+        <string>SMTP Username</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_FROMNAME</key>
+        <string>SMTP sender name</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_FROMMAIL</key>
+        <string>SMTP sender address</string>
+    </chunk>
+    <chunk>
+        <key>RECAPTCHA_PUB_KEY</key>
+        <string>Public Key</string>
+    </chunk>
+    <chunk>
+        <key>RECAPTCHA_PRIV_KEY</key>
+        <string>Private Key</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_NEWS</key>
+        <string>Delete News</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_NEWS_QUESTION</key>
+        <string>Delete this News?</string>
+    </chunk>
+    <chunk>
+        <key>DISPLAY_CONTENT_FROM_UNTIL</key>
+        <string>Display content (from/until)</string>
+    </chunk>
+    <chunk>
+        <key>GENERAL_INFORMATION</key>
+        <string>General Information</string>
+    </chunk>
+</root>

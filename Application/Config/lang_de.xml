@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <chunk>
+        <key>GUEST_ACCOUNT</key>
+        <string>-- Gast Account --</string>
+    </chunk>
+    <chunk>
+        <key>All</key>
+        <string>Alle</string>
+    </chunk>
+    <chunk>
+        <key>RELOAD</key>
+        <string>Neu laden</string>
+    </chunk>
+    <chunk>
+        <key>SAVE</key>
+        <string>Speichern</string>
+    </chunk>
+    <chunk>
+        <key>LOGIN</key>
+        <string>Anmelden</string>
+    </chunk>
+    <chunk>
+        <key>USERNAME</key>
+        <string>Benutzername</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD</key>
+        <string>Passwort</string>
+    </chunk>
+    <chunk>
+        <key>CLASS</key>
+        <string>Klasse</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_CHAR</key>
+        <string>Charakter bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>STAY_LOGGED_IN</key>
+        <string>Angemeldet bleiben</string>
+    </chunk>
+    <chunk>
+        <key>WRONG_USERNAME_OR_PASSWORD</key>
+        <string>Falscher Benutzername oder Passwort</string>
+    </chunk>
+    <chunk>
+        <key>HOME</key>
+        <string>Startseite</string>
+    </chunk>
+    <chunk>
+        <key>LOG</key>
+        <string>Log</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_LIST</key>
+        <string>Loot-Liste</string>
+    </chunk>
+    <chunk>
+        <key>ITEM_RECIEVED</key>
+        <string>Item erhalten</string>
+    </chunk>
+    <chunk>
+        <key>VIEW_PROFIL</key>
+        <string>Profil ansehen</string>
+    </chunk>
+    <chunk>
+        <key>UPDATE</key>
+        <string>Aktuallisieren</string>
+    </chunk>
+    <chunk>
+        <key>SYSTEM</key>
+        <string>System</string>
+    </chunk>
+    <chunk>
+        <key>RUN_SYSTEM_UPDATE</key>
+        <string>Systemaktuallisierung ausführen</string>
+    </chunk>
+    <chunk>
+        <key>PROGRESS</key>
+        <string>Fortschritt</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_PROGRESS</key>
+        <string>Den Fortschritt bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>TRASH</key>
+        <string>Mülleimer</string>
+    </chunk>
+    <chunk>
+        <key>CLEAR</key>
+        <string>Leeren</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_DUNGEON</key>
+        <string>Dungeon erstellen</string>
+    </chunk>
+    <chunk>
+        <key>ROOSTER</key>
+        <string>Mitgliederliste</string>
+    </chunk>
+    <chunk>
+        <key>LOG_OUT</key>
+        <string>Abmelden</string>
+    </chunk>
+    <chunk>
+        <key>RIGHTS</key>
+        <string>Rechte</string>
+    </chunk>
+    <chunk>
+        <key>MANAGE_USER</key>
+        <string>Benutzer verwalten</string>
+    </chunk>
+    <chunk>
+        <key>GROUPS</key>
+        <string>Gruppen</string>
+    </chunk>
+    <chunk>
+        <key>GROUP</key>
+        <string>Gruppe</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD_TO_SHORT</key>
+        <string>Das Passwort ist zu kurz</string>
+    </chunk>
+    <chunk>
+        <key>LETTERS</key>
+        <string>Buchstaben</string>
+    </chunk>
+    <chunk>
+        <key>NO_PASSWORD_CHANGE</key>
+        <string>Das Passwort wird nicht geändert</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_GROUP</key>
+        <string>Gruppe erstellen</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_GROUP</key>
+        <string>Gruppe löschen</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_USER</key>
+        <string>Benutzer löschen</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_USER</key>
+        <string>Benutzer erstellen</string>
+    </chunk>
+    <chunk>
+        <key>CANCEL</key>
+        <string>Abbrechen</string>
+    </chunk>
+    <chunk>
+        <key>ALL_GROUPS</key>
+        <string>Alle Gruppen</string>
+    </chunk>
+    <chunk>
+        <key>CREATE</key>
+        <string>Erstellen</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_USER</key>
+        <string>Neuen Benutzer erstellen</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_GROUP</key>
+        <string>Neue Gruppe erstellen</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_DASHBOARD</key>
+        <string>Admin Bereich</string>
+    </chunk>
+    <chunk>
+        <key>DESCRIPTION</key>
+        <string>Beschreibung</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_EVENT</key>
+        <string>Ereignis Bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_EVENT</key>
+        <string>Ereignis löschen</string>
+    </chunk>
+    <chunk>
+        <key>LAST_LOOT</key>
+        <string>Letzter Loot</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_CHAR</key>
+        <string>Neuen Spieler erstellen</string>
+    </chunk>
+    <chunk>
+        <key>POSITION</key>
+        <string>Position</string>
+    </chunk>
+    <chunk>
+        <key>EVENT</key>
+        <string>Ereignis</string>
+    </chunk>
+    <chunk>
+        <key>NAME</key>
+        <string>Name</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_NEW_EVENT</key>
+        <string>Neues Ereignis erstellen</string>
+    </chunk>
+    <chunk>
+        <key>REMOVE</key>
+        <string>Entfernen</string>
+    </chunk>
+    <chunk>
+        <key>DELETE</key>
+        <string>Löschen</string>
+    </chunk>
+    <chunk>
+        <key>MISSING_PLAYER</key>
+        <string>Fehlende Spieler</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_EVENT_QUESTION</key>
+        <string>Soll dieses Ereignis gelöscht werden? Diese Aktion kann nicht Rückgängig gemacht werden.</string>
+    </chunk>
+    <chunk>
+        <key>UPLOAD</key>
+        <string>Hochladen</string>
+    </chunk>
+    <chunk>
+        <key>CONFIGURATION</key>
+        <string>Einstellungen</string>
+    </chunk>
+    <chunk>
+        <key>EDIT</key>
+        <string>Bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>NEWS</key>
+        <string>Neuigkeiten</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_NEWS</key>
+        <string>Neuigkeiten bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>ADD_CHAR</key>
+        <string>Charakter hinzurfügen</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_CHAR</key>
+        <string>Charakter löschen</string>
+    </chunk>
+    <chunk>
+        <key>USER_MANAGEMENT_DESCRIPTION</key>
+        <string>In der linken Spalte sind alle Gruppen aufgelistet, in denen der Benutzer bereits ist. In der rechten Spalte siehst du alle Gruppen, in denen der Benutzer noch nicht ist.</string>
+    </chunk>
+    <chunk>
+        <key>GROUP_MANAGEMENT_DESCRIPTION</key>
+        <string>In der linken Spalte sind alle Gruppenmitglieder aufgelistet. In der rechten Spalte siehst du alle Benutzer, die nicht in der Gruppe sind.</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_USER</key>
+        <string>Benutzer bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_EVENT</key>
+        <string>Ereignis erstellen</string>
+    </chunk>
+    <chunk>
+        <key>ADD_TO_GROUP</key>
+        <string>Zu Gruppe hinzufügen</string>
+    </chunk>
+    <chunk>
+        <key>SHOW_ADMIN_MENU</key>
+        <string>Admin Menü anzeigen</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_GROUP</key>
+        <string>Gruppe bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>REMOVE_CHARACTER</key>
+        <string>Spieler entfernen</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_CONFIG</key>
+        <string>Einstellungen bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>USER</key>
+        <string>Benutzer</string>
+    </chunk>
+    <chunk>
+        <key>CHANGE_CHAR_POSITION</key>
+        <string>Charakter position ändern</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_ROOSTER_DATA</key>
+        <string>Mitgliederliste bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_USER_QUESTION</key>
+        <string>Soll dieser Benutzer gelöscht werden? Diese Aktion kann nicht wieder rückgängig gemacht werden.</string>
+    </chunk>
+    <chunk>
+        <key>SHOWN_NAME</key>
+        <string>Angezeigter Name</string>
+    </chunk>
+    <chunk>
+        <key>CREATE_ENCOUNTER</key>
+        <string>Boss erstellen</string>
+    </chunk>
+    <chunk>
+        <key>PROFIL</key>
+        <string>Profil</string>
+    </chunk>
+    <chunk>
+        <key>Register</key>
+        <string>Registrieren</string>
+    </chunk>
+    <chunk>
+        <key>ALL_USER</key>
+        <string>Alle Benutzer</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_GROUP_QUESTION</key>
+        <string>Soll die Gruppe gelöscht werden? Dieser Vorgang kann nicht wieder rückgängig gemacht werden.</string>
+    </chunk>
+    <chunk>
+        <key>INSUFFICIENT_RIGHTS</key>
+        <string>Keine ausreichende Berechtigung</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_MOVED</key>
+        <string>verschoben</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_REMOVED_FROM_EVENT</key>
+        <string>Aus Ereignis entfernt</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_ADDED_TO_EVENT</key>
+        <string>Zum Ereignis hinzugefügt</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_ADDED</key>
+        <string>Char hinzugefügt</string>
+    </chunk>
+    <chunk>
+        <key>CHAR_REMOVED</key>
+        <string>Char entfernt</string>
+    </chunk>
+    <chunk>
+        <key>COUNT</key>
+        <string>Anzahl</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_ACCESS_DASHBOARD</key>
+        <string>Admin Startseite sehen.</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_ADD_REMOVE_USER_TO_GROUP</key>
+        <string>Benutzer aus Gruppe entfernen und hinzufügen.</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_CREATE_GROUP</key>
+        <string>Gruppe erstellen.</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_CREATE_USER</key>
+        <string>Benutzer erstellen.</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_DELETE_GROUP</key>
+        <string>Gruppe löschen.</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_DELETE_USER</key>
+        <string>Benutzer löschen.</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_EDIT_GROUP</key>
+        <string>Gruppe bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>ADMIN_EDIT_USER</key>
+        <string>Benutzer bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_ROOSTER_CONFIG</key>
+        <string>Einstellungen der Mitgliederliste bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_ADD_CHAR_TO_EVENT</key>
+        <string>Charakter zum Event hinzufügen.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_CREATE_CHAR</key>
+        <string>Charakter erstellen.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_CREATE_EVENT</key>
+        <string>Ereignis erstellen.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_DELETE_CHAR</key>
+        <string>Charakter löschen.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_DELETE_EVENT</key>
+        <string>Ereignis löschen.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_EDIT_CHAR</key>
+        <string>Charakter bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_EDIT_EVENT</key>
+        <string>Ereignis bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_KILL_KING</key>
+        <string>Loot zuweisen.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_MOVE_CHAR</key>
+        <string>Charakter verschieben.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_REMOVE_CHAR_FROM_EVENT</key>
+        <string>Charakter aus Ereignis entfernen.</string>
+    </chunk>
+    <chunk>
+        <key>LOOT_VIEW_ADMIN_MENU</key>
+        <string>Administrations Menü sehen.</string>
+    </chunk>
+    <chunk>
+        <key>PROFIL_CHANGE_USERNAME_AND_PASSWORD</key>
+        <string>Eigenen Benutzernamen und Passwort ändern.</string>
+    </chunk>
+    <chunk>
+        <key>PROFIL_VIEW</key>
+        <string>Profil sehen.</string>
+    </chunk>
+    <chunk>
+        <key>PROGRESS_EDIT</key>
+        <string>Fortschritt bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>RIGHTS_ACCESS_DASHBOARD</key>
+        <string>Rechteverwaltung sehen.</string>
+    </chunk>
+    <chunk>
+        <key>RIGHTS_EDIT_GROUP_RIGHTS</key>
+        <string>Gruppenrechte bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>MENUE-LINKS</key>
+        <string><![CDATA[Men&uuml; Verwaltung]]></string>
+    </chunk>
+    <chunk>
+        <key>EDIT_MENUE_LINK</key>
+        <string>Links hinzufügen / bearbeiten / löschen</string>
+    </chunk>
+    <chunk>
+        <key>SHOW_MENUE_ADMIN</key>
+        <string>Menü Verwaltung anzeigen</string>
+    </chunk>
+    <chunk>
+        <key>RIGHTS_EDIT_USER_RIGHTS</key>
+        <string>Benutzerrechte bearbeiten.</string>
+    </chunk>
+    <chunk>
+        <key>PATH</key>
+        <string>Pfad</string>
+    </chunk>
+    <chunk>
+        <key>ADD</key>
+        <string>Hinzufügen</string>
+    </chunk>
+    <chunk>
+        <key>SHOW_LOOT_LIST</key>
+        <string>Loot Liste ansehen</string>
+    </chunk>
+    <chunk>
+        <key>show_progress</key>
+        <string>Fortschritt ansehen</string>
+    </chunk>
+    <chunk>
+        <key>submit</key>
+        <string>Absenden</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORDS_NOT_MATCH</key>
+        <string>Die Passwörter stimmen nicht überein.</string>
+    </chunk>
+    <chunk>
+        <key>INPUT_WAS_EMPTY</key>
+        <string>Die Eingabe war leer.</string>
+    </chunk>
+    <chunk>
+        <key>CAPTCHA_PRE_TEXT</key>
+        <string>Um weitere Eingaben machen zu können, musst du zuerst die zwei
+        Worte aus dem Bild in das Feld eingeben.</string>
+    </chunk>
+    <chunk>
+        <key>VERIFY_EMAIL</key>
+        <string>Überprüfe E-Mail Adresse</string>
+    </chunk>
+    <chunk>
+        <key>VERIFY_USERNAME</key>
+        <string>Überprüfe E-Mail Adresse</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORDS_NOT_EQUAL</key>
+        <string>Die eingegeben Passwörter stimmen nicht überein.</string>
+    </chunk>
+    <chunk>
+        <key>USERNAME_NOT_FREE</key>
+        <string>Der Bentuzername ist nicht mehr verfügbar. Dein Login hat nichts mit dem angezeigten Namen auf der Seite zu tun.</string>
+    </chunk>
+    <chunk>
+        <key>EMAIL_NOT_FREE</key>
+        <string>Die Email Adresse wird bereits benutzt.</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD_REQUIRES_NUMBER</key>
+        <string>Das Passwort sollte mindestens eine Zahl enthalten.</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD_MIN_LENGTH</key>
+        <string>Der Benutzername muss mindestens 2 Zeichen lang sein.</string>
+    </chunk>
+    <chunk>
+        <key>USERNAME_MIN_LENGTH</key>
+        <string>Der Benutzername ist zu kurz.</string>
+    </chunk>
+    <chunk>
+        <key>EMAIL_NOT_VALID</key>
+        <string>Die Email Adresse ist nicht richtig.</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD_NEEDS_SPECIAL_CHAR</key>
+        <string>Das Passwort sollte mindestens ein Sonderzeichen enthalten.</string>
+    </chunk>
+    <chunk>
+        <key>RETYPE_PASSWORD</key>
+        <string>Passwort wiederholen</string>
+    </chunk>
+    <chunk>
+        <key>CHANGE</key>
+        <string>Ändern</string>
+    </chunk>
+    <chunk>
+        <key>NO_RIGHTS_NEEDED</key>
+        <string>Keine Rechte benötigt</string>
+    </chunk>
+    <chunk>
+        <key>ITEMS_RECIEVED</key>
+        <string>Items erhalten</string>
+    </chunk>
+    <chunk>
+        <key>ADDED_AGO</key>
+        <string>Hinzugefügt vor</string>
+    </chunk>
+    <chunk>
+        <key>EDIT_CONFIG</key>
+        <string>Einstellungen bearbeiten</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_USERNAME</key>
+        <string>SMTP Benutzername</string>
+    </chunk>
+    <chunk>
+        <key>GUILD_NAME</key>
+        <string>Name der Gilde</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_PASSWORD</key>
+        <string>SMTP Passwort</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_FROMNAME</key>
+        <string>SMTP Absender Name</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_FROMMAIL</key>
+        <string>SMTP Absender Adresse</string>
+    </chunk>
+    <chunk>
+        <key>SMTP_HOST</key>
+        <string>SMTP Server</string>
+    </chunk>
+    <chunk>
+        <key>RECAPTCHA_PUB_KEY</key>
+        <string>Öffentlicher Schlüssel</string>
+    </chunk>
+    <chunk>
+        <key>RECAPTCHA_PRIV_KEY</key>
+        <string>Geheimer Schlüssel</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_NEWS_QUESTION</key>
+        <string>Soll diese Neuigkeit gelöscht werden?</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_NEWS</key>
+        <string>Neuigkeit löschen</string>
+    </chunk>
+    <chunk>
+        <key>DISPLAY_CONTENT_FROM_UNTIL</key>
+        <string>Beitrag Anzeigen (von/bis)</string>
+    </chunk>
+    <chunk>
+        <key>GENERAL_INFORMATION</key>
+        <string>Allgemeine Informationen</string>
+    </chunk>
+    <chunk>
+        <key>NAME_ALREADY_EXISTS</key>
+        <string>Der Name existiert schon, bitte wähle einen anderen</string>
+    </chunk>
+    <chunk>
+        <key>INPUT_WAS_EMPTY</key>
+        <string>Die Eingabe war leer</string>
+    </chunk>
+    <chunk>
+        <key>EMAIL_IS_NOT_VALID</key>
+        <string>Die Email Adresse enthält einen Fehler.</string>
+    </chunk>
+    <chunk>
+        <key>USERNAME_IS_NOT_VALID</key>
+        <string>Der Benutzername ist nicht zulässig.</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD_IS_NOT_VALID</key>
+        <string>Das Passwort ist nicht zulässig.</string>
+    </chunk>
+    <chunk>
+        <key>ERROR_ON_EMAIL_SUBMITTING</key>
+        <string>Es ist beim Versand der E-Mail ein Fehler aufgetreten.</string>
+    </chunk>
+    <chunk>
+        <key>YOU_ARE_NOW_REGISTERED</key>
+        <string>Du hast dich erfolgreich Registriert.</string>
+    </chunk>
+    <chunk>
+        <key>NEW_PASSWORD</key>
+        <string>Neues Passwort</string>
+    </chunk>
+    <chunk>
+        <key>OLD_PASSWORD</key>
+        <string>Altes Passwort</string>
+    </chunk>
+    <chunk>
+        <key>WRONG_PASSWORD</key>
+        <string>Das eingegebene Passwort war falsch.</string>
+    </chunk>
+    <chunk>
+        <key>LOST_PASSWORD</key>
+        <string>Passwort vergessen</string>
+    </chunk>
+</root>
