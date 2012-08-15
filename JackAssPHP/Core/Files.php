@@ -130,7 +130,7 @@ class Files
         $css_folder
             = $registry->get("APPLICATION_PATH") .
             "CSS" .
-            \DIRECTORY_SEPARATOR;
+            DS;
 
         if (isset($args["filename"])) {
 
