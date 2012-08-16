@@ -79,8 +79,8 @@ $registry->set("SYSTEM_PATH" , ROOT . "JackAssPHP" . DS);
 $registry->set("CORE_PATH" , ROOT . "JackAssPHP" . DS . "Core" . DS);
 $registry->set("HELPER_PATH" , ROOT . "JackAssPHP" . DS . "Helper" . DS);
 $registry->set("LIBRARY_PATH" , ROOT . "JackAssPHP" . DS . "LIBRARY" . DS);
-$registry->set("ERROR_LOG_PATH", ROOT . "JackAssPHP" . DS . "Logs" . DS);
-$registry->set("INFO_LOG_PATH", ROOT . "JackAssPHP" . DS . "Logs" . DS);
+$registry->set("ERROR_LOG_PATH", ROOT . "JackAssPHP" . DS . "Logs" . DS . "Error" . DS);
+$registry->set("INFO_LOG_PATH", ROOT . "JackAssPHP" . DS . "Logs" . DS . "Info" . DS);
 /**
  * Load Project config from DB
  */
