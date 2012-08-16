@@ -37,11 +37,6 @@ $registry->set("USER_TABLE" , "user");
 $registry->set("DEFAULT_LANG" , "en");
 
 /**
- * MySQL Table name for Translation data.
- */
-//$registry->set("Translation_table_name" , "translation");
-
-/**
  * Login
  */
 $registry->set("MIN_PASSWORD_LENGTH" , 6);
@@ -64,15 +59,7 @@ $registry->set("VALIDATE_SPECIAL_CHAR_REGEX", "/[\!\/\\?§$%&\(\)=\"\-_@]/");
 $registry->set("CAPTCHA_CLASS", "ReCaptcha");
 $registry->set("CAPTCHA_REDIRECT_PATH", "captcha/show/");
 $registry->set("CAPTCHA_VERIFY_PATH", "captcha/verify/");
-/**
- * Selected Theme
- *
- * enter the Folder name where the Layout files are located
- *
- * Application/Themes/<your theme name>
- *
- */
-//$registry->set("Theme_name", "Mesa");
+
 /**
  * Blacklist config
  */
@@ -83,16 +70,17 @@ $registry->set("SYSTEM_STYLE" , "default");
 
 $registry->set("ERROR_CONTROLLER" , "Error/notFound");
 
-$registry->set("APPLICATION_PATH" , ROOT . "Application" . DIRECTORY_SEPARATOR);
-$registry->set("JAVASCRIPT_PATH" , ROOT . "Application" . DIRECTORY_SEPARATOR . "JS" . DIRECTORY_SEPARATOR);
-$registry->set("CONFIG_PATH" , ROOT . "Application" . DIRECTORY_SEPARATOR . "Config" . DIRECTORY_SEPARATOR);
-$registry->set("VIEW_PATH" , ROOT . "Application" . DIRECTORY_SEPARATOR . "Views" . DIRECTORY_SEPARATOR);
-$registry->set("THEME_PATH" , ROOT . "Application" . DIRECTORY_SEPARATOR . "Themes" . DIRECTORY_SEPARATOR);
-$registry->set("SYSTEM_PATH" , ROOT . "JackAssPHP" . DIRECTORY_SEPARATOR);
-$registry->set("CORE_PATH" , ROOT . "JackAssPHP" . DIRECTORY_SEPARATOR . "Core" . DIRECTORY_SEPARATOR);
-$registry->set("HELPER_PATH" , ROOT . "JackAssPHP" . DIRECTORY_SEPARATOR . "Helper" . DIRECTORY_SEPARATOR);
-$registry->set("LIBRARY_PATH" , ROOT . "JackAssPHP" . DIRECTORY_SEPARATOR . "LIBRARY" . DIRECTORY_SEPARATOR);
-
+$registry->set("APPLICATION_PATH" , ROOT . "Application" . DS);
+$registry->set("JAVASCRIPT_PATH" , ROOT . "Application" . DS . "JS" . DS);
+$registry->set("CONFIG_PATH" , ROOT . "Application" . DS . "Config" . DS);
+$registry->set("VIEW_PATH" , ROOT . "Application" . DS . "Views" . DS);
+$registry->set("THEME_PATH" , ROOT . "Application" . DS . "Themes" . DS);
+$registry->set("SYSTEM_PATH" , ROOT . "JackAssPHP" . DS);
+$registry->set("CORE_PATH" , ROOT . "JackAssPHP" . DS . "Core" . DS);
+$registry->set("HELPER_PATH" , ROOT . "JackAssPHP" . DS . "Helper" . DS);
+$registry->set("LIBRARY_PATH" , ROOT . "JackAssPHP" . DS . "LIBRARY" . DS);
+$registry->set("ERROR_LOG_PATH", ROOT . "JackAssPHP" . DS . "Logs" . DS);
+$registry->set("INFO_LOG_PATH", ROOT . "JackAssPHP" . DS . "Logs" . DS);
 /**
  * Load Project config from DB
  */

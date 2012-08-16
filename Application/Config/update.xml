@@ -13,6 +13,16 @@
         <field Name="Key" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
         <field Name="Time" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
     </table>
+    <table Name="ErrorLog">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Message" Type="varchar(512)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Time" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
+    <table Name="InfoLog">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Message" Type="varchar(512)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Time" Type="int(64)" Null="NO" Key="" Default="" Extra="" />
+    </table>
     <data table="config">
         <row>
             <Name>MAIL_MODE</Name>
