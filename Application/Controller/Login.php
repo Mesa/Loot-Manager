@@ -36,7 +36,7 @@ class Login extends \JackAssPHP\Core\Controller
             $html->password_input = $_SESSION["password_input_salt"];
             $html->login_try = $blacklist->getLoginTry();
 
-            if ($args["small"] == 1) {
+            if (isset($args["small"]) && $args["small"] == 1) {
                 $html->inline = true;
             }
             echo $html->load("Login/Login_Window");

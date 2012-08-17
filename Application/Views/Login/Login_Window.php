@@ -1,4 +1,4 @@
-<?php if (! $inline ):?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<?php if (!isset($inline)):?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
     "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
@@ -19,7 +19,7 @@
     </head>
     <body>
 <?php endif;?>
-<?php if($inline): ?>
+<?php if(isset($inline) && $inline === true): ?>
         <script type="text/javascript">
            $("#form").attr('action','<?php echo $web_root . "login/check/" . $form_token ?>');
         </script>
@@ -49,7 +49,7 @@
                 </div>
             <?php endif; ?>
         </div>
-<?php if(! $inline ): ?>
+<?php if(!isset($inline) ): ?>
     </body>
 </html>
 <?php endif; ?>
