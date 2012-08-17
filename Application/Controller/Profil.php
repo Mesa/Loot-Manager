@@ -35,7 +35,7 @@ class Profil extends \JackAssPHP\Core\Controller
      *
      * @return void
      */
-    public function index ()
+    public function index ( $args = null)
     {
         $rights = \Factory::getRights();
 

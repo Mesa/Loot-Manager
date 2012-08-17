@@ -4,9 +4,11 @@
 </div>
 <div class="block">
     <h3 class="headline">Chars</h3>
+    <?php if(isset($char_list)): ?>
     <?php foreach ($char_list as $char ): ?>
 
     <?php endforeach;?>
+    <?php endif;?>
 </div>
 <div class="block form">
         <h3 class="headline"><?php echo $lang->translate("GENERAL_INFORMATION"); ?></h3>

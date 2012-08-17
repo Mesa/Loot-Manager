@@ -6,6 +6,7 @@
         <meta name="robots" content="">
         <meta http-equiv="Content-Style-Type" content="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <?php if(isset($meta_data)):?>
         <?php foreach($meta_data as $meta) {
             $data = "<meta ";
                 foreach($meta as $key => $value){
@@ -14,14 +15,16 @@
             $data .= ">\n\t";
             echo $data;
         }?>
+        <?php endif; ?>
         <title><?php echo (isset($title))? $title: "" ?></title>
 
         <link rel="stylesheet" type="text/css" href="<?php echo $web_root ?>jquery-ui-1.8.15.custom.css">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Knewave|Patrick+Hand">
+        <?php if(isset($css_link)): ?>
         <?php foreach ($css_link as $link):?>
         <link rel="stylesheet" type="text/css" href="<?php echo $link ?>">
         <?php endforeach; ?>
-
+        <?php endif; ?>
         <?php echo $this->load("layout.css") ?>
         <?php echo $this->load("DropDownMenu/css"); ?>
         <?php echo (isset($css))? $css:"" ?>
@@ -32,17 +35,18 @@
         <script type="text/javascript" src="<?php echo $web_root ?>submenu.js"></script>
         <?php echo $this->load("DropDownMenu/js");?>
 
+        <?php if(isset($js_link)): ?>
         <?php foreach ($js_link as $link): ?>
         <script type="text/javascript" src="<?php echo $link?>"></script>
         <?php endforeach;?>
-
+        <?php endif; ?>
         <?php echo (isset($javascript))? $javascript:"" ?>
 
     </head>
     <body>
         <div id="wrapper">
             <div id="header" class="block border_light">
-                <?php echo $header ?>
+                <?php echo (isset($header))?$header:"" ?>
                 <?php
                     $menu = new JackAssPHP\Helper\DropDownMenu();
                     $menu->loadXml(__DIR__ . DS . "../../Config/AdminMenu.xml");
@@ -50,11 +54,11 @@
                 ?>
             </div>
             <div id="content">
-                <?php echo $content ?>
+                <?php echo (isset($content))?$content:"" ?>
             </div>
             <div id="footer">
                 <?php echo $this->load("FrontPage/footer"); ?>
-                <?php echo $footer ?>
+                <?php echo (isset($footer))?$footer:"" ?>
             </div>
         </div>
         <div id="copy">

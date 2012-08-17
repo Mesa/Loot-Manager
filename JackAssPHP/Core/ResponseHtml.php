@@ -11,12 +11,15 @@ namespace JackAssPHP\Core;
 class ResponseHtml
 {
     protected $template_path = null;
-    private $_data = array();
+    private $_data = array(
+        "javascript"=> "",
+        "content"   => "",
+        "css"       => ""
+    );
     protected $response_code = 200;
 
     public function __construct( )
     {
-        $this->_data["content"] = "";
         $this->view = \Factory::getView();
     }
 
@@ -33,7 +36,7 @@ class ResponseHtml
         }
 
         if ( $this->template_path == null) {
-            throw new \JackAssPHP\Exceptions\HtmlException("No Template" . $this->template_path);
+            throw new \HtmlException("No Template" . $this->template_path);
         }
             extract($this->_data);
             include $this->template_path;
@@ -110,7 +113,7 @@ class ResponseHtml
         } elseif (file_exists ($this->view_path . $filename . ".php" )) {
             $this->template_path = $this->view_path . $filename . ".php";
         } else {
-            throw new \JackAssPHP\Exceptions\HtmlException($this->theme_path.$filename);
+            throw new \HtmlException($this->theme_path.$filename);
         }
     }
 

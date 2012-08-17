@@ -16,7 +16,7 @@ class SystemConfig extends \JackAssPHP\Core\Controller
         $this->rights = \Factory::getRights();
     }
 
-    public function index ( $args )
+    public function index ( $args = null )
     {
         if ( $this->rights->hasRight("edit_config")) {
             $template = \Factory::getView();
@@ -34,7 +34,7 @@ class SystemConfig extends \JackAssPHP\Core\Controller
         }
     }
 
-    public function edit ( $args )
+    public function edit ( $args = null )
     {
         if ( $this->rights->hasRight("edit_config") ) {
             if ( isset($args["name"]) and isset($_POST["value"])) {

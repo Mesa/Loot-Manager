@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Loot-Manager
+ *
+ *
+ * @author Mesa <daniel.langemann@gmx.de>
+ */
+
 namespace JackAssPHP\Helper;
 
 class DropDownMenu
@@ -8,8 +15,11 @@ class DropDownMenu
     protected $data = array();
     protected $menuRoot = true;
 
-    public function __construct ( $path )
+    public function __construct ()
     {
+        /**
+         * @todo use Dependency Injection!!
+         */
         $this->registry = \Factory::getRegistry();
     }
 
@@ -128,7 +138,7 @@ class DropDownMenu
             $data = "<ul class=\"topnav\" id=\"menu\">";
             $this->menuRoot = false;
         } else {
-            $data .= "<ul class=\"subnav\">";
+            $data = "<ul class=\"subnav\">";
         }
 
         foreach ($list as $item) {

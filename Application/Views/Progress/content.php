@@ -4,6 +4,7 @@
             <div class="dungeon block border_light">
                 <h3 id="dungeon_<?php echo $dungeon["Id"] ?>" class="headline"><?php echo $dungeon["Name"] ?></h3>
                 <div class="dropper">
+                    <?php if (isset($encounter[$dungeon["Id"]])): ?>
                     <?php foreach ( $encounter[$dungeon["Id"]] as $boss ): ?>
                         <div class="block encounter border_light <?php echo ($boss["Status"] == 1) ? "enc_down" : "" ?>">
                             <div class="name" id="encId_<?php echo $boss["Id"] ?>"><?php echo $boss["Name"] ?></div>
@@ -18,6 +19,7 @@
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
                 <?php if ( $this->rights->hasRight("progress_edit") ): ?>
                     <div class="options">
@@ -40,6 +42,7 @@
                 Instanzen und Boss können hier abgelegt werden.
             </div>
             <div class="dropper">
+                <?php if(isset($encounter) and isset($encounter[0])):?>
                 <?php foreach ( $encounter[0] as $boss ): ?>
                     <div class="block encounter border_light <?php echo ($boss["Status"] == 1) ? "enc_down" : "" ?>">
                         <div class="name" id="encId_<?php echo $boss["Id"] ?>"><?php echo $boss["Name"] ?></div>
@@ -52,6 +55,7 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
+                <?php endif; ?>
         <?php foreach ( $disabledDungeons as $dungeon ): ?>
             <div class="dungeon block border_light">
                 <h3 id="dungeon_<?php echo $dungeon["Id"] ?>" class="headline"><?php echo $dungeon["Name"] ?></h3>
