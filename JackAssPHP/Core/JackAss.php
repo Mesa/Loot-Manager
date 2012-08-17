@@ -16,7 +16,7 @@ require 'JackAssPHP/Exceptions/FileException.php';
 
 set_exception_handler('DefaultException');
 if (PRODUCTION_USE === true) {
-    error_reporting(0);
+    error_reporting(E_ALL);
     ini_set('log_errors', '1');
     ini_set('display_errors', '0');
 } else {
@@ -30,10 +30,12 @@ if (PRODUCTION_USE === true) {
 require ROOT . 'JackAssPHP/Core/security.php';
 require ROOT . 'JackAssPHP/Core/autoloader.php';
 
-$autoload = new SplClassLoader("Application", ROOT );
+$autoload = new SplClassLoader(null, ROOT);
 $autoload->register();
-$autoload = new SplClassLoader("JackAssPHP", ROOT);
-$autoload->register();
+//$autoload = new SplClassLoader("Application", ROOT);
+//$autoload->register();
+//$autoload = new SplClassLoader("JackAssPHP", ROOT);
+//$autoload->register();
 
 require ROOT . 'JackAssPHP/Core/Factory.php';
 require ROOT . 'Application/Config/System.php';
