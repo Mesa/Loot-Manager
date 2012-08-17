@@ -10,20 +10,19 @@ namespace JackAssPHP\Core;
 
 require 'JackAssPHP/Exceptions/DefaultException.php';
 require 'JackAssPHP/Exceptions/RightException.php';
-//require 'JackAssPHP/Exception/ViewException.php';
+require 'JackAssPHP/Exceptions/ViewException.php';
+require 'JackAssPHP/Exceptions/HtmlException.php';
+require 'JackAssPHP/Exceptions/FileException.php';
 
 set_exception_handler('DefaultException');
 if (PRODUCTION_USE === true) {
     error_reporting(0);
-    /**
-     * @todo implement Logger to write errors to file / DB
-     */
     ini_set('log_errors', '1');
     ini_set('display_errors', '0');
 } else {
     error_reporting(E_ALL);
-    include 'ErrorHandler.php';
-    set_error_handler("JackAssErrorHandler");
+//    include 'ErrorHandler.php';
+//    set_error_handler("JackAssErrorHandler");
     ini_set('log_errors', '0');
     ini_set('display_errors', '1');
 }
@@ -31,8 +30,6 @@ if (PRODUCTION_USE === true) {
 require ROOT . 'JackAssPHP/Core/security.php';
 require ROOT . 'JackAssPHP/Core/autoloader.php';
 
-//$autoload = new SplClassLoader(null, ROOT);
-//$autoload->register();
 $autoload = new SplClassLoader("Application", ROOT );
 $autoload->register();
 $autoload = new SplClassLoader("JackAssPHP", ROOT);

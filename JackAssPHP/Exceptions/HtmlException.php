@@ -1,18 +1,20 @@
 <?php
 
 /**
- * Mesas Loot Manager
- * Copyright (C) 2011  Mesa <Daniel Langemann>
+ * Loot-Manager
  *
- * Php version 5.3
  *
- * @category Exception
- * @package  Mesas_Loot_Manager
- * @author   Mesa <daniel.langemann@gmx.de>
+ * @author Mesa <daniel.langemann@gmx.de>
  */
 
 class HtmlException extends \Exception
 {
+
+    public function __construct ( $message, $code, $previous )
+    {
+        parent::__construct($message, $code, $previous);
+
+    }
 
     public function errorMessage ()
     {
@@ -24,11 +26,8 @@ class HtmlException extends \Exception
                         File: <b style=\"color:steelblue\">" . $trace[0]["file"] . "</b> : <b style=\"color:steelblue\">" . $trace[0]["line"] . "</b> <br>\n
                         Class: " . $trace[1]["class"] . " -> " . $trace[1]["function"] . "<br>\n
                         <hr>\n";
-        } else {
-            /**
-             * @todo add file log entry
-             */
         }
+
     }
 
 }

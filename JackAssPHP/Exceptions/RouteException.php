@@ -16,15 +16,8 @@ namespace JackAssPHP\Exceptions;
 class RouteException extends \Exception
 {
 
-    public function __construct ( ) {
+    public function __construct ( $msg ) {
          parent::__construct();
+         $this->message = $msg;
     }
-
-    public function errorMessage ($exception)
-    {
-//        echo $exception->getMessage();
-        var_dump($this);
-        return false;
-    }
-
 }

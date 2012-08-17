@@ -1,20 +1,19 @@
 <?php
 
 /**
- * Mesas Loot Manager
- * Copyright (C) 2011  Mesa <Daniel Langemann>
+ * Loot-Manager
  *
- * Php version 5.3
- *
- * @category Exception
- * @package  Mesas_Loot_Manager
  * @author   Mesa <daniel.langemann@gmx.de>
  */
 
-namespace JackAssPHP\Exceptions;
-
 class ViewException extends \Exception
 {
+
+    public function __construct ( $msg )
+    {
+        parent::__construct();
+        $this->message = $msg;
+    }
 
     public function errorMessage ()
     {
@@ -22,17 +21,13 @@ class ViewException extends \Exception
 
             $trace = $this->getTrace();
 
-            echo "<b>[VIEW]</b> Template <u><span style='color: blue'>$this->message</span></u> is missing. <br>
-                        Line: " . $trace[0]["line"] . "<br>\n
-                        File: " . $trace[0]["file"] . "<br>\n
-                        Class: " . $trace[1]["class"] . " -> " . $trace[1]["function"] . "<br>\n
+            echo "<b>[VIEW]</b> $this->message
+                        Class: " . $trace[1]["class"] . " -> " . $trace[1]["function"] . ":" . $trace[0]["line"] . "<br>\n
                         <hr>\n";
-            return true;
-        } else {
-            /**
-             * @todo add file log entry
-             */
         }
+
+        $log = \Factory::getLogger();
+        $log->Error("[View] $this->message  " . $trace[1]["class"] . "->" . $trace[1]["function"] .":".$trace[0]["line"]);
     }
 
 }

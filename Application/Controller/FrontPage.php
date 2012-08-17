@@ -8,13 +8,6 @@
 
 namespace Application\Controller;
 
-/**
- * Default Controller displays the index / main page
- *
- * @category Controller
- * @package  MLM
- * @author   Mesa <daniel.langemann@gmx.de>
- */
 class FrontPage extends \JackAssPHP\Core\Controller
 {
 
@@ -70,7 +63,4 @@ class FrontPage extends \JackAssPHP\Core\Controller
 
         $html->addToContent($template->load("FrontPage/impressum"));
     }
-
 }
-
-?>
