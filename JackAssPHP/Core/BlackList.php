@@ -71,7 +71,7 @@ class BlackList
                 $this->locking_time + time()
             );
         } elseif ($this->row_id !== null) {
-            $this->dao->updateIp($this->row_id, $this->login_try);
+            $this->dao->updateIp($this->row_id, $this->login_try, 0);
         } else {
             $this->dao->addIp($this->ip);
         }
