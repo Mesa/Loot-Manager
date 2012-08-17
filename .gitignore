@@ -1,5 +1,5 @@
-nbproject*
-mysql.ini
-index.php
-JackAssPHP/Logs/*
-Application/Images/images/*
+/nbproject*
+/mysql.ini
+/index.php
+/JackAssPHP/Logs/*
+/Application/Images/images/*
