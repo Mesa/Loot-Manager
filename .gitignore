@@ -2,3 +2,4 @@ nbproject*
 mysql.ini
 index.php
 JackAssPHP/Logs/*
+Application/Images/images/*
