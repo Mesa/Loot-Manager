@@ -92,11 +92,6 @@ class Factory
      */
     public static function getView ()
     {
-//        if (!array_key_exists("View", self::$_objects)) {
-//            self::$_objects["View"] = new JackAssPHP\Core\View();
-//        }
-//
-//        return self::$_objects["View"];
 
         return new JackAssPHP\Core\View(
                         self::getRegistry(),
@@ -214,6 +209,33 @@ class Factory
 
     public static function getLogger ( )
     {
+        if ( !array_key_exists("logger", self::$_objects)) {
+            self::$_objects["logger"] = new \JackAssPHP\Logger\Logger();
 
+            self::$_objects["logger"]->setInfoLogger(
+                new JackAssPHP\Logger\DbLogger(
+                    Factory::getDB(),
+                        "InfoLog"
+                )
+            );
+            self::$_objects["logger"]->setErrorLogger(
+                new JackAssPHP\Logger\DbLogger(
+                    Factory::getDB(),
+                        "ErrorLog"
+                )
+            );
+            self::$_objects["logger"]->setErrorLogger(
+                new \JackAssPHP\Logger\FileLogger(
+                    self::getRegistry()->get("ERROR_LOG_PATH")
+                )
+            );
+            self::$_objects["logger"]->setInfoLogger(
+                new \JackAssPHP\Logger\FileLogger(
+                    self::getRegistry()->get("INFO_LOG_PATH")
+                )
+            );
+        }
+
+        return self::$_objects["logger"];
     }
 }

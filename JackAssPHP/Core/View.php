@@ -18,6 +18,9 @@ class View
     protected $filename = null;
     protected $view_path = null;
     protected $output = null;
+    /**
+     * @var object $registry Registry class
+     */
     protected $registry = null;
 
     /**
@@ -27,7 +30,7 @@ class View
         Registry $registry,
         \JackAssPHP\Helper\Rights $rights,
         \JackAssPHP\Helper\Translate $translate,
-        JackAssPHP\Core\User $user
+        \JackAssPHP\Core\User $user
     ) {
         $this->registry     = $registry;
         $this->view_path    = $this->registry->get("VIEW_PATH");
@@ -84,12 +87,12 @@ class View
          * start Server Output caching
          */
         ob_start();
-        if (file_exists( $this->theme_path . $filename . ".php") ) {
+        if (file_exists($this->theme_path . $filename . ".php")) {
             include $this->theme_path . $filename . ".php";
-        } elseif (file_exists ($this->view_path . $filename . ".php" )) {
+        } elseif (file_exists($this->view_path . $filename . ".php")) {
             include $this->view_path . $filename . ".php";
-        } elseif ( ! \PRODUCTION_USE ) {
-            throw new \JackAssPHP\Exceptions\ViewException($this->filename);
+        } else {
+            throw new \ViewException("Template not found (" . $filename . ".php)");
         }
 
         /**
@@ -106,6 +109,8 @@ class View
 
     /**
      * Delete all data from previous usage.
+     *
+     * @return object $this
      */
     public function reset ()
     {
