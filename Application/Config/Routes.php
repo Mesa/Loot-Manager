@@ -43,14 +43,6 @@ $route["loot/char_log/(?<char_id>[0-9]+)/"]["GET"] = "Loot/getCharLog";
 $route["loot/event_log/(?<event_id>[0-9]+)/"]["GET"] = "Loot/getEventLog";
 $route["loot/(?<event_id>[0-9]+)?"]["*"] = "Loot";
 
-$route["progress/edit_dungeon/"]["POST"] = "Progress/editDungeon";
-$route["progress/clear_trash/"]["POST"] = "Progress/clearTrash";
-$route["progress/create_dungeon/"]["POST"] = "Progress/createDungeon";
-$route["progress/create_encounter/"]["POST"] = "Progress/createEncounter";
-//$route["progress/remove_encounter/"]["POST"] = "Progress/removeEncounter";
-$route["progress/add_encounter/"]["POST"] = "Progress/addEncounter";
-$route["progress/edit_encounter/"]["POST"] = "Progress/editEncounter";
-
 $route["progress/"]["*"] = "Progress";
 
 $route["rank/remove_auto_insert/"]["POST"] = "Ranks/removeAutoInsert";
@@ -76,7 +68,7 @@ $route["langswitcher/"]["*"] = "LangSwitcher";
 
 $route["update/"]["*"] = "\\JackAssPHP\\Core\\Update";
 
-$route["config/edit/(?<name>[a-z_]+)/"]["*"] = "SystemConfig/edit";
+$route["config/edit/(?<name>[a-zA-Z_]+)/"]["*"] = "SystemConfig/edit";
 $route["config/"]["*"] = "SystemConfig";
 
 $route["create_group/"]["POST"] = "Group/create";
