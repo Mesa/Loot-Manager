@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
+    <sql><![CDATA[DROP TABLE IF EXISTS Dungeon;]]></sql>
+    <sql><![CDATA[DROP TABLE IF EXISTS addons;]]></sql>
+    <table Name="Encounter">
+        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
+        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
+        <field Name="Status" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+        <field Name="KillDate" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
+    </table>
     <table Name="config">
         <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
         <field Name="Value" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
