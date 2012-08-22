@@ -1,19 +1,14 @@
 <?php
 
 /**
- * Mesas Loot Manager
- * Copyright (C) 2011  Mesa <Daniel Langemann>
+ * Loot-Manager
+ * Copyright (C) 2012  Mesa <Daniel Langemann>
  *
- * Php version 5.3
- *
- * @category Helper
- * @package  Mesas_Loot_Manager
+ * @package  Loot-Manager
  * @author   Mesa <daniel.langemann@gmx.de>
  */
 
 namespace JackAssPHP\Helper;
-
-use JackAssPHP\Core\MySQLDB as Database;
 
 class Installer
 {
@@ -250,6 +245,7 @@ class Installer
     protected function executeSql ( $sql )
     {
         $this->db->query($sql);
+        echo "$sql<hr>";
     }
 
     protected function moveFile ( $from, $to )
