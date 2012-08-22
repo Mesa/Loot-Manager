@@ -197,196 +197,6 @@ password="{MYSQL_PASSWORD}"
         <field Name="KillDate" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
         <field Name="Order" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
     </table>
-    <data table="Encounter">
-        <row>
-            <Id>1</Id>
-            <Name>Duke Letareus</Name>
-            <Dungeon>1</Dungeon>
-            <Order>0</Order>
-        </row>
-        <row>
-            <Id>2</Id>
-            <Name>Prinz Hylas</Name>
-            <Dungeon>1</Dungeon>
-            <Order>1</Order>
-        </row>
-        <row>
-            <Id>3</Id>
-            <Name>Oracle Aleria</Name>
-            <Dungeon>1</Dungeon>
-            <Order>2</Order>
-        </row>
-        <row>
-            <Id>4</Id>
-            <Name>Infiltrator Johlen</Name>
-            <Dungeon>1</Dungeon>
-            <Order>3</Order>
-        </row>
-        <row>
-            <Id>5</Id>
-            <Name>Lord Greenscale</Name>
-            <Dungeon>1</Dungeon>
-            <Order>4</Order>
-        </row>
-        <row>
-            <Id>6</Id>
-            <Name>Dunkler Fokus</Name>
-            <Dungeon>2</Dungeon>
-            <Order>1</Order>
-        </row>
-        <row>
-            <Id>7</Id>
-            <Name>Kriegsmeister Galenir</Name>
-            <Dungeon>2</Dungeon>
-            <Order>2</Order>
-        </row>
-        <row>
-            <Id>8</Id>
-            <Name>Herald Gaurath</Name>
-            <Dungeon>2</Dungeon>
-            <Order>3</Order>
-        </row>
-        <row>
-            <Id>9</Id>
-            <Name>Plutonus der Unsterbliche</Name>
-            <Dungeon>2</Dungeon>
-            <Order>4</Order>
-        </row>
-        <row>
-            <Id>10</Id>
-            <Name>Alsbeth die Streitsuchende</Name>
-            <Dungeon>2</Dungeon>
-            <Order>5</Order>
-        </row>
-        <row>
-            <Name>Uruuluk</Name>
-            <Dungeon>4</Dungeon>
-            <Order>1</Order>
-        </row>
-        <row>
-            <Name>Thalguur</Name>
-            <Dungeon>4</Dungeon>
-            <Order>2</Order>
-        </row>
-        <row>
-            <Name>Guurloth</Name>
-            <Dungeon>4</Dungeon>
-            <Order>3</Order>
-        </row>
-        <row>
-            <Name>Anrak the Foul</Name>
-            <Dungeon>4</Dungeon>
-            <Order>4</Order>
-        </row>
-        <row>
-            <Name>Jorb</Name>
-            <Dungeon>5</Dungeon>
-            <Order>1</Order>
-        </row>
-        <row>
-            <Name>Ragetide</Name>
-            <Dungeon>5</Dungeon>
-            <Order>2</Order>
-        </row>
-        <row>
-            <Name>Isskal</Name>
-            <Dungeon>5</Dungeon>
-            <Order>3</Order>
-        </row>
-        <row>
-            <Name>Hydriss</Name>
-            <Dungeon>5</Dungeon>
-            <Order>4</Order>
-        </row>
-        <row>
-            <Name>Murdantix</Name>
-            <Dungeon>3</Dungeon>
-            <Order>1</Order>
-        </row>
-        <row>
-            <Name>Soulrender Zilas</Name>
-            <Dungeon>3</Dungeon>
-            <Order>2</Order>
-        </row>
-        <row>
-            <Name>Vladmal Prime</Name>
-            <Dungeon>3</Dungeon>
-            <Order>3</Order>
-        </row>
-        <row>
-            <Name>Grugonim</Name>
-            <Dungeon>3</Dungeon>
-            <Order>4</Order>
-        </row>
-        <row>
-            <Name>Rune King Molinar</Name>
-            <Dungeon>3</Dungeon>
-            <Order>5</Order>
-        </row>
-        <row>
-            <Name>Estrode</Name>
-            <Dungeon>3</Dungeon>
-            <Order>6</Order>
-        </row>
-        <row>
-            <Name>Matron Zamira</Name>
-            <Dungeon>3</Dungeon>
-            <Order>7</Order>
-        </row>
-        <row>
-            <Name>Sicaron</Name>
-            <Dungeon>3</Dungeon>
-            <Order>8</Order>
-        </row>
-        <row>
-            <Name>Inquisitor Garau</Name>
-            <Dungeon>3</Dungeon>
-            <Order>9</Order>
-        </row>
-        <row>
-            <Name>Inwar Darktide</Name>
-            <Dungeon>3</Dungeon>
-            <Order>10</Order>
-        </row>
-        <row>
-            <Name>Jornaru and Akylios</Name>
-            <Dungeon>3</Dungeon>
-            <Order>11</Order>
-        </row>
-    </data>
-    <table Name="Dungeon">
-        <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
-        <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
-        <field Name="Order" Type="int(64)" Null="YES" Key="" Default="" Extra="" />
-        <field Name="Status" Type="int(1)" Null="YES" Key="" Default="" Extra="" />
-    </table>
-    <data table="Dungeon">
-        <row>
-            <Id>1</Id>
-            <Name>Grünschuppe</Name>
-            <Order>3</Order>
-        </row>
-        <row>
-            <Id>2</Id>
-            <Name>Seelenfluss</Name>
-            <Order>4</Order>
-        </row>
-        <row>
-            <Id>3</Id>
-            <Name>Hammerhall</Name>
-            <Order>5</Order>
-        </row>
-        <row>
-            <Id>4</Id>
-            <Name>Güldene Prophezeihung</Name>
-            <Order>1</Order>
-        </row>
-        <row>
-            <Id>5</Id>
-            <Name>Überflutete Hallen</Name>
-            <Order>2</Order>
-        </row>
-    </data>
     <table Name="chars">
         <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
         <field Name="Name" Type="varchar(45)" Null="NO" Key="" Default="" Extra="" />
@@ -401,6 +211,9 @@ password="{MYSQL_PASSWORD}"
         </row>
         <row>
             <Name>Benutzer</Name>
+        </row>
+        <row>
+            <Name>Mitglieder</Name>
         </row>
     </data>
     <table Name="news">
@@ -439,12 +252,12 @@ password="{MYSQL_PASSWORD}"
             <type>2</type>
         </row>
     </data>
-    <table Name="guild_ranks">
+<!--    <table Name="guild_ranks">
         <field Name="Id" Type="Int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
         <field Name="Name" Type="varchar(64)" Null="NO" Key="" Default="" Extra="" />
         <field Name="DisplayOrder" Type="int(64)" Null="NO" Key="" Default="0" Extra="" />
         <field Name="display" Type="int(1)" Null="YES" Key="" Default="0" Extra="" />
-    </table>
+    </table>-->
     <table Name="events">
         <field Name="Id" Type="int(64)" Null="NO" Key="PRI" Default="" Extra="auto_increment" />
         <field Name="Name" Type="varchar(45)" Null="NO" Key="" Default="" Extra="" />
