@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <root>
     <chunk>
         <key>SAVE</key>
@@ -355,7 +354,7 @@
     </chunk>
     <chunk>
         <key>GUEST_ACCOUNT</key>
-        <string>Guest Account</string>
+        <string>-- Guest Account --</string>
     </chunk>
     <chunk>
         <key>MENUE-LINKS</key>
@@ -436,5 +435,214 @@
     <chunk>
         <key>GENERAL_INFORMATION</key>
         <string>General Information</string>
+    </chunk>
+
+    <chunk>
+        <key>NAME_ALREADY_EXISTS</key>
+        <string>The username exists already.</string>
+    </chunk>
+    <chunk>
+        <key>INPUT_WAS_EMPTY</key>
+        <string>The input was empty</string>
+    </chunk>
+    <chunk>
+        <key>EMAIL_IS_NOT_VALID</key>
+        <string>The E-Mail is not valid</string>
+    </chunk>
+    <chunk>
+        <key>USERNAME_IS_NOT_VALID</key>
+        <string>The username is not allowed.</string>
+    </chunk>
+    <chunk>
+        <key>PASSWORD_IS_NOT_VALID</key>
+        <string>The password is not allowed</string>
+    </chunk>
+    <chunk>
+        <key>ERROR_ON_EMAIL_SUBMITTING</key>
+        <string>An error occured on submitting the mail</string>
+    </chunk>
+    <chunk>
+        <key>YOU_ARE_NOW_REGISTERED</key>
+        <string>You registered successful</string>
+    </chunk>
+    <chunk>
+        <key>NEW_PASSWORD</key>
+        <string>New password</string>
+    </chunk>
+    <chunk>
+        <key>OLD_PASSWORD</key>
+        <string>Old password</string>
+    </chunk>
+    <chunk>
+        <key>WRONG_PASSWORD</key>
+        <string>The entered password was wrong.</string>
+    </chunk>
+    <chunk>
+        <key>LOST_PASSWORD</key>
+        <string>Plost password</string>
+    </chunk>
+    <chunk>
+        <key>ARRANGE_ITEMS</key>
+        <string>Sort</string>
+    </chunk>
+   <chunk>
+        <key>HAMMERHALL</key>
+        <string>Hammerhall</string>
+    </chunk>
+    <chunk>
+        <key>GREENSCALE</key>
+        <string>Greenscale</string>
+    </chunk>
+    <chunk>
+        <key>SOULRIVER</key>
+        <string>Soulriver</string>
+    </chunk>
+    <chunk>
+        <key>DARK_FOCUS</key>
+        <string>Dark Focus</string>
+    </chunk>
+    <chunk>
+        <key>URUULUK</key>
+        <string>Uruuluk</string>
+    </chunk>
+    <chunk>
+        <key>THALGUUR</key>
+        <string>Thalguur</string>
+    </chunk>
+    <chunk>
+        <key>GUURLOTH</key>
+        <string>Guurloth</string>
+    </chunk>
+    <chunk>
+        <key>ANRAK_THE_FOUL</key>
+        <string>Anrak the foul</string>
+    </chunk>
+    <chunk>
+        <key>DUKE_LETAREUS</key>
+        <string>Duke Letareus</string>
+    </chunk>
+    <chunk>
+        <key>PRINCE_HYLAS</key>
+        <string>Prince Hylas</string>
+    </chunk>
+    <chunk>
+        <key>ORACLE_ALERIA</key>
+        <string>Oracle Aleria</string>
+    </chunk>
+    <chunk>
+        <key>INFILTRATOR_JOHLEN</key>
+        <string>Infiltrator Johlen</string>
+    </chunk>
+    <chunk>
+        <key>LORD_GREENSCALE</key>
+        <string>Lord greenscale</string>
+    </chunk>
+    <chunk>
+        <key>WARLORD_GALENIR</key>
+        <string>Warlord Galenier</string>
+    </chunk>
+    <chunk>
+        <key>HERALD_GAURATH</key>
+        <string>Herald Gaurath</string>
+    </chunk>
+    <chunk>
+        <key>PLUTONUS_THE_IMMORTAL</key>
+        <string>Plutonus the immortal</string>
+    </chunk>
+    <chunk>
+        <key>ALSBETH_THE_DISCORDANT</key>
+        <string>Alsbeth the discordant</string>
+    </chunk>
+    <chunk>
+        <key>MURDANTIX</key>
+        <string>Murdantix</string>
+    </chunk>
+    <chunk>
+        <key>SOULRENDER_ZILAS</key>
+        <string>Soulrender Zilas</string>
+    </chunk>
+    <chunk>
+        <key>VLADMAL_PRIME</key>
+        <string>Valdmal Prime</string>
+    </chunk>
+    <chunk>
+        <key>GRUGONIM</key>
+        <string>Grugonim</string>
+    </chunk>
+    <chunk>
+        <key>RUNE_KING_MOLINAR</key>
+        <string>Rune King Molinar</string>
+    </chunk>
+    <chunk>
+        <key>ESTRODE</key>
+        <string>Estrode</string>
+    </chunk>
+    <chunk>
+        <key>MATRON_ZAMIRA</key>
+        <string>Matron Zamira</string>
+    </chunk>
+    <chunk>
+        <key>SICARON</key>
+        <string>Sicaron</string>
+    </chunk>
+    <chunk>
+        <key>INQUISITOR_GARAU</key>
+        <string>Inquisitor Garau</string>
+    </chunk>
+    <chunk>
+        <key>INWAR_DARKTIDE</key>
+        <string>Inwar Darktide</string>
+    </chunk>
+    <chunk>
+        <key>JORNARU_AND_AKYLIOS</key>
+        <string>Jornaru and Akylios</string>
+    </chunk>
+    <chunk>
+        <key>FLOODED_HALLS</key>
+        <string>Flooded Halls</string>
+    </chunk>
+    <chunk>
+        <key>RAID_COMMANDER_JORB</key>
+        <string>Raid commander Jorb</string>
+    </chunk>
+    <chunk>
+        <key>JOLORAL</key>
+        <string>Joloral</string>
+    </chunk>
+    <chunk>
+        <key>ISSKAL</key>
+        <string>Isskal</string>
+    </chunk>
+    <chunk>
+        <key>HYDRISS</key>
+        <string>High princes Hydriss</string>
+    </chunk>
+    <chunk>
+        <key>RISE_OF_THE_PHOENIX</key>
+        <string>Rise of the phoenix</string>
+    </chunk>
+    <chunk>
+        <key>ERANDORN</key>
+        <string>Erandorn</string>
+    </chunk>
+    <chunk>
+        <key>BERUHAST</key>
+        <string>Beruhast</string>
+    </chunk>
+    <chunk>
+        <key>GENERAL_SILGEN</key>
+        <string>General Silgen</string>
+    </chunk>
+    <chunk>
+        <key>ARAKHURN</key>
+        <string>High priest Arakhurn</string>
+    </chunk>
+    <chunk>
+        <key>GILDED_PROPHECY</key>
+        <string>Gilded prophecy</string>
+    </chunk>
+    <chunk>
+        <key>CHANGE_STATE</key>
+        <string>change state</string>
     </chunk>
 </root>

@@ -661,4 +661,176 @@
         <key>LOST_PASSWORD</key>
         <string>Passwort vergessen</string>
     </chunk>
+    <chunk>
+        <key>ARRANGE_ITEMS</key>
+        <string>Sortieren</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_ENCOUNTER_QUESTION</key>
+        <string>Soll der folgende Boss gelöscht werden?</string>
+    </chunk>
+    <chunk>
+        <key>DELETE_DUNGEON_QUESTION</key>
+        <string>Soll die folgende Instanz gelöscht werden?</string>
+    </chunk>
+    <chunk>
+        <key>HAMMERHALL</key>
+        <string>Hammerhall</string>
+    </chunk>
+    <chunk>
+        <key>GREENSCALE</key>
+        <string>Grünschuppe</string>
+    </chunk>
+    <chunk>
+        <key>SOULRIVER</key>
+        <string>Seelenfluss</string>
+    </chunk>
+    <chunk>
+        <key>DARK_FOCUS</key>
+        <string>Dunkler Focus</string>
+    </chunk>
+    <chunk>
+        <key>URUULUK</key>
+        <string>Uruuluk</string>
+    </chunk>
+    <chunk>
+        <key>THALGUUR</key>
+        <string>Thalguur</string>
+    </chunk>
+    <chunk>
+        <key>GUURLOTH</key>
+        <string>Guurloth</string>
+    </chunk>
+    <chunk>
+        <key>ANRAK_THE_FOUL</key>
+        <string>Anrak the foul</string>
+    </chunk>
+    <chunk>
+        <key>DUKE_LETAREUS</key>
+        <string>Duke Letareus</string>
+    </chunk>
+    <chunk>
+        <key>PRINCE_HYLAS</key>
+        <string>Prinz Hylas</string>
+    </chunk>
+    <chunk>
+        <key>ORACLE_ALERIA</key>
+        <string>Orakel Aleria</string>
+    </chunk>
+    <chunk>
+        <key>INFILTRATOR_JOHLEN</key>
+        <string>Infiltrator Johlen</string>
+    </chunk>
+    <chunk>
+        <key>LORD_GREENSCALE</key>
+        <string>Lord Grünschuppe</string>
+    </chunk>
+    <chunk>
+        <key>WARLORD_GALENIR</key>
+        <string>Kriegsmeister Galenier</string>
+    </chunk>
+    <chunk>
+        <key>HERALD_GAURATH</key>
+        <string>Herald Gaurath</string>
+    </chunk>
+    <chunk>
+        <key>PLUTONUS_THE_IMMORTAL</key>
+        <string>Plutonus der Unsterbliche</string>
+    </chunk>
+    <chunk>
+        <key>ALSBETH_THE_DISCORDANT</key>
+        <string>Alsbeth die Streitsuchende</string>
+    </chunk>
+    <chunk>
+        <key>MURDANTIX</key>
+        <string>Murdantix</string>
+    </chunk>
+    <chunk>
+        <key>SOULRENDER_ZILAS</key>
+        <string>Soulrender Zilas</string>
+    </chunk>
+    <chunk>
+        <key>VLADMAL_PRIME</key>
+        <string>Valdmal Prime</string>
+    </chunk>
+    <chunk>
+        <key>GRUGONIM</key>
+        <string>Grugonim</string>
+    </chunk>
+    <chunk>
+        <key>RUNE_KING_MOLINAR</key>
+        <string>Runenkönig Molinar</string>
+    </chunk>
+    <chunk>
+        <key>ESTRODE</key>
+        <string>Estrode</string>
+    </chunk>
+    <chunk>
+        <key>MATRON_ZAMIRA</key>
+        <string>Matron Zamira</string>
+    </chunk>
+    <chunk>
+        <key>SICARON</key>
+        <string>Sicaron</string>
+    </chunk>
+    <chunk>
+        <key>INQUISITOR_GARAU</key>
+        <string>Inquisitor Garau</string>
+    </chunk>
+    <chunk>
+        <key>INWAR_DARKTIDE</key>
+        <string>Inwar Darktide</string>
+    </chunk>
+    <chunk>
+        <key>JORNARU_AND_AKYLIOS</key>
+        <string>Jornaru und Akylios</string>
+    </chunk>
+    <chunk>
+        <key>FLOODED_HALLS</key>
+        <string>Überflutete Hallen</string>
+    </chunk>
+    <chunk>
+        <key>RAID_COMMANDER_JORB</key>
+        <string>Überfallkommandant Jorb</string>
+    </chunk>
+    <chunk>
+        <key>JOLORAL</key>
+        <string>Joloral Wutflut</string>
+    </chunk>
+    <chunk>
+        <key>ISSKAL</key>
+        <string>Isskal</string>
+    </chunk>
+    <chunk>
+        <key>HYDRISS</key>
+        <string>Hochprinzessin Hydriss</string>
+    </chunk>
+    <chunk>
+        <key>RISE_OF_THE_PHOENIX</key>
+        <string>Aufstieg des Phönix</string>
+    </chunk>
+    <chunk>
+        <key>ERANDORN</key>
+        <string>Erandorn</string>
+    </chunk>
+    <chunk>
+        <key>BERUHAST</key>
+        <string>Beruhast</string>
+    </chunk>
+    <chunk>
+        <key>GENERAL_SILGEN</key>
+        <string>General Silgen</string>
+    </chunk>
+    <chunk>
+        <key>ARAKHURN</key>
+        <string>Hohepriester Arakhurn</string>
+    </chunk>
+    <chunk>
+        <key>GILDED_PROPHECY</key>
+        <string>Güldene Prophezeihung</string>
+    </chunk>
+    <chunk>
+        <key>CHANGE_STATE</key>
+        <string>Status ändern</string>
+    </chunk>
 </root>
