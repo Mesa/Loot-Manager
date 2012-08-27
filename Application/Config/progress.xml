@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <rift>
+        <dungeon name="GILDED_PROPHECY">
+            <boss name="URUULUK"/>
+            <boss name="THALGUUR"/>
+            <boss name="GUURLOTH"/>
+            <boss name="ANRAK_THE_FOUL"/>
+        </dungeon>
+        <dungeon name="GREENSCALE">
+            <boss name="DUKE_LETAREUS"/>
+            <boss name="PRINCE_HYLAS"/>
+            <boss name="ORACLE_ALERIA"/>
+            <boss name="INFILTRATOR_JOHLEN"/>
+            <boss name="LORD_GREENSCALE"/>
+        </dungeon>
+        <dungeon name="SOULRIVER">
+            <boss name="DARK_FOCUS"/>
+            <boss name="WARLORD_GALENIR"/>
+            <boss name="HERALD_GAURATH"/>
+            <boss name="PLUTONUS_THE_IMMORTAL"/>
+            <boss name="ALSBETH_THE_DISCORDANT"/>
+        </dungeon>
+        <dungeon name="HAMMERHALL">
+            <boss name="MURDANTIX"/>
+            <boss name="SOULRENDER_ZILAS"/>
+            <boss name="VLADMAL_PRIME"/>
+            <boss name="GRUGONIM"/>
+            <boss name="RUNE_KING_MOLINAR"/>
+            <boss name="ESTRODE"/>
+            <boss name="MATRON_ZAMIRA"/>
+            <boss name="SICARON"/>
+            <boss name="INQUISITOR_GARAU"/>
+            <boss name="INWAR_DARKTIDE"/>
+            <boss name="JORNARU_AND_AKYLIOS"/>
+        </dungeon>
+        <dungeon name="FLOODED_HALLS">
+            <boss name="RAID_COMMANDER_JORB"/>
+            <boss name="JOLORAL"/>
+            <boss name="ISSKAL"/>
+            <boss name="HYDRISS"/>
+        </dungeon>
+        <dungeon name="RISE_OF_THE_PHOENIX">
+            <boss name="ERANDORN"/>
+            <boss name="BERUHAST"/>
+            <boss name="GENERAL_SILGEN"/>
+            <boss name="ARAKHURN"/>
+        </dungeon>
+    </rift>
+</root>

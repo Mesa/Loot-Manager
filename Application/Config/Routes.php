@@ -43,6 +43,7 @@ $route["loot/char_log/(?<char_id>[0-9]+)/"]["GET"] = "Loot/getCharLog";
 $route["loot/event_log/(?<event_id>[0-9]+)/"]["GET"] = "Loot/getEventLog";
 $route["loot/(?<event_id>[0-9]+)?"]["*"] = "Loot";
 
+$route["progress/switch_status/(?<name>[a-zA-Z_]+)/"]["*"] = "Progress/switchState";
 $route["progress/"]["*"] = "Progress";
 
 $route["rank/remove_auto_insert/"]["POST"] = "Ranks/removeAutoInsert";
