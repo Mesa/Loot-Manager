@@ -10,7 +10,7 @@
             </div>
             <div class="setting-value"
                  data-name="value"
-                 data-url="edit/GUILD_NAME/">
+                 data-url="<?php echo $web_root?>config/edit/GUILD_NAME/">
                 <?php echo $config->getValue("GUILD_NAME");?>
             </div>
         </div>
