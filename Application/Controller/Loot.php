@@ -349,10 +349,10 @@ class Loot extends \JackAssPHP\Core\Controller
         $loot_log = new \Application\Model\LootLog();
         $char_log_limit = (int) $_GET["item_count"];
 
-        $log_args["suicide"] = ($_GET["suicide"] == "checked" ) ? "suicide" : "";
-        $log_args["moved"] = ($_GET["moved"] == "checked") ? "char_moved" : "";
-        $log_args["added"] = ($_GET["added"] == "checked") ? "char_added_to_event" : "";
-        $log_args["removed"] = ($_GET["removed"] == "checked") ? "char_removed_from_list" : "";
+        $log_args["suicide"] = (isset($_GET["suicide"]) && $_GET["suicide"] == "checked" ) ? "suicide" : "";
+        $log_args["moved"] = (isset($_GET["moved"]) && $_GET["moved"] == "checked") ? "char_moved" : "";
+        $log_args["added"] = (isset($_GET["added"]) && $_GET["added"] == "checked") ? "char_added_to_event" : "";
+        $log_args["removed"] = (isset($_GET["removed"]) && $_GET["removed"] == "checked") ? "char_removed_from_list" : "";
 
         $user = \Factory::getUser();
         $eventDao = new \Application\Model\Event();
@@ -372,7 +372,6 @@ class Loot extends \JackAssPHP\Core\Controller
             "char_moved" => $lang->translate("Char_moved")
         );
         $html->action_names = $actions;
-        $html->headline["item_recieved"] = $lang->translate("Item_recieved");
 
         $html->user = $user;
         $html->event = $eventDao;
