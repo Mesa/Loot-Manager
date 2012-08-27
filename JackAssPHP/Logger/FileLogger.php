@@ -31,7 +31,9 @@ class FileLogger implements \JackAssPHP\Logger\LoggerInterface
 
     public function __destruct ()
     {
-        fclose($this->file_handle);
+        if ( $this->file_handle !== null) {
+            fclose($this->file_handle);
+        }
     }
 
     /**
