@@ -167,37 +167,17 @@
                 if (childNodes.length > 0 ) {
                     for ( var z = 0; z < childNodes.length; z++) {
                         if ( childNodes.eq(z).data("readonly") != "") {
-                            childNodes.eq(z).data("oldBg",childNodes.eq(z).css("backgroundColor"));
-                            childNodes.eq(z).animate({
-                                backgroundColor : "#FFFFCE"
-                            });
+                            childNodes.eq(z).addClass("edit-me-highlight");
                         }
                     }
                 } else {
-                    $.data(items[i], "oldBg", items[i].css("backgroundColor"));
-                    items[i].animate({
-                        backgroundColor : "#FFFFCE"
-                    })
+                    items[i].addClass("edit-me-highlight")
                 }
             }
         },
 
         hideHint  : function ( ) {
-            for (var i = 0; i < items.length; i++ ) {
-                var childNodes = items[i].find("[data-name]");
-
-                if (childNodes.length > 0 ) {
-                    for ( var z = 0; z < childNodes.length; z++) {
-                        childNodes.eq(z).animate({
-                            backgroundColor: childNodes.eq(z).data("oldBg" )
-                        })
-                    }
-                } else {
-                    items[i].animate({
-                        backgroundColor: $.data(items[i], "oldBg")
-                    })
-                }
-            }
+            $(".edit-me-highlight").removeClass("edit-me-highlight");
         },
 
         notify : function ( event, args ) {
@@ -486,7 +466,7 @@
 
                 if ( typeof input.data("htmleditor") != "undefined" ) {
                         methods.showHtmlEditorBtn(input);
-                } else if (  input.data("autocomplete") != "" && typeof input.data("autocomplete") != "undefined") {
+                } else if (input.data("autocomplete") != "" && typeof input.data("autocomplete") != "undefined") {
                     input.focus( function () {
                         methods.showAutoComplete($(this))
                     }).blur( function () {
@@ -577,21 +557,21 @@
                             }
                         }
                     } else {
-                        if ( item.html() != response.value) {
+                        if (item.html() != response.value) {
                             item.html(response.value);
                         }
                     }
                 } else {
 
-                    if ( childNodes.length > 0 ) {
+                    if (childNodes.length > 0) {
                         if ( response.message != null ) {
                             methods.showErrorMsg(childNodes.eq(0), response.message);
                         }
-                        for ( var i = 0; i < childNodes.length; i++) {
+                        for (var i = 0; i < childNodes.length; i++) {
                             childNodes.eq(i).html(childNodes.eq(i).data("oldData"));
                         }
                     } else {
-                        if ( response.message != null ) {
+                        if (response.message != null) {
                             methods.showErrorMsg(item, response.message);
                         }
                         item.html($.data(item, "oldData"));
@@ -636,7 +616,7 @@
 
   $.fn.editMe = function( method ) {
     if ( methods[method] ) {
-        return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+        return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
     } else if ( typeof method === 'object' || ! method ) {
         return methods.init.apply( this, arguments );
     } else {

@@ -212,7 +212,7 @@
     }
 
     .highlight {
-        background-color: #ffffAA;
+        background-color: #ffffAA !important;
     }
 
     .information {
@@ -449,8 +449,13 @@
     }
     #edit-me-layer button:hover {
         color: white;
-        background-color: steelblue
+        background-color: steelblue;
     }
+
+    .edit-me-highlight {
+        background-color: #ffffAA !important;
+    }
+
     #user-info {
         position: absolute;
         bottom: -12px;
