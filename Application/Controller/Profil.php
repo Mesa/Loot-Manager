@@ -8,13 +8,9 @@
 
 namespace Application\Controller;
 
-use JackAssPHP\Helper\HtmlPage as JaHt;
-
 /**
  * Displays the Profile page
  *
- * @category Controller
- * @package  MLM
  * @author   Mesa <daniel.langemann@gmx.de>
  */
 class Profil extends \JackAssPHP\Core\Controller

@@ -8,11 +8,10 @@
 
 namespace JackAssPHP\Core;
 
-use JackAssPHP\Core\View as Template;
-use JackAssPHP\Helper\HtmlPage as HtmlPage;
-
 /**
  * Default controller is called when no other route matches.
+ * 
+ * @todo Rewrite Default controller, the used classes doesnt exist anymore
  */
 class DefaultController extends Controller
 {
@@ -36,25 +35,25 @@ class DefaultController extends Controller
      */
     public function index ( $args = null )
     {
-        $body = new Template();
-        $body->title = $this->registry->get("PROJECT_NAME") .
-            " " . $this->registry->get("VERSION_NR");
-
-        $layout = new Template();
-        $layout->title = $this->registry->get("PROJECT_NAME");
-        $layout->debug = "";
-        $layout->body = $body->load("index_body");
-
-        $helper = HtmlPage::getInstance();
-        $meta = array("author" => "Mesa");
-        $helper->addMeta($meta);
-        $meta = array("charset" => "utf-8");
-        $helper->addMeta($meta);
-
-        $layout->meta = $helper->getMetaData();
-        $layout_content = $layout->load("main");
-
-        echo $layout_content;
+//        $body = new Template();
+//        $body->title = $this->registry->get("PROJECT_NAME") .
+//            " " . $this->registry->get("VERSION_NR");
+//
+//        $layout = new Template();
+//        $layout->title = $this->registry->get("PROJECT_NAME");
+//        $layout->debug = "";
+//        $layout->body = $body->load("index_body");
+//
+//        $helper = HtmlPage::getInstance();
+//        $meta = array("author" => "Mesa");
+//        $helper->addMeta($meta);
+//        $meta = array("charset" => "utf-8");
+//        $helper->addMeta($meta);
+//
+//        $layout->meta = $helper->getMetaData();
+//        $layout_content = $layout->load("main");
+//
+//        echo $layout_content;
     }
 
 }

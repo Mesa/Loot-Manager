@@ -8,8 +8,6 @@
 
 namespace Application\Controller;
 
-use JackAssPHP\Helper\HtmlPage as JaHt;
-
 class MenueLinks extends \JackAssPHP\Core\Controller
 {
 

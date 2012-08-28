@@ -8,7 +8,6 @@
 
 namespace Application\Controller;
 
-use JackAssPHP\Helper\HtmlPage as JaHt;
 use Application\Model\User as UserModel;
 
 class User extends \JackAssPHP\Core\Controller
@@ -22,47 +21,6 @@ class User extends \JackAssPHP\Core\Controller
     {
         $this->loadSystem();
         $this->lang = \Factory::getTranslate();
-    }
-
-    /**
-     * main Method
-     *
-     * @return void
-     */
-    public function index ( $args = null )
-    {
-        $rights = \Factory::getRights();
-
-        if ($rights->hasRight("manage_user_dashboard")) {
-
-            $helper = new JaHt();
-            $lang = \Factory::getTranslate();
-
-            $helper->addMeta(
-                    array(
-                        "http-equiv" => "content-Type",
-                        "content" => "text/html; charset=UTF-8"
-                    )
-            );
-
-            $helper->addMeta(
-                    array(
-                        "name" => "author",
-                        "content" => $this->registry->get("META_AUTHOR_NAME")
-                    )
-            );
-
-            $html = \Factory::getView();
-            $admin_js = \Factory::getView();
-            $menu = \Factory::getView();
-
-            $html->meta = $helper->getMetaData();
-            $html->header = $menu->load("admin/menu");
-
-            $html->admin_js = $admin_js->load("User/admin.js");
-            $html->title = $lang->translate("MANAGE_USER");
-            echo $html->load("admin/main");
-        }
     }
 
     protected function createUsername ( $string )
@@ -243,8 +201,7 @@ class User extends \JackAssPHP\Core\Controller
                 );
             }
         } else {
-            $template = \Factory::getView();
-            echo $template->load("Error/noRights");
+            throw new \RightException("admin_edit_user");
         }
     }
 

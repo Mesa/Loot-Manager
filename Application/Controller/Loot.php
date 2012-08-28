@@ -10,7 +10,6 @@ namespace Application\Controller;
 
 use Application\Model\Chars as ApPl;
 use Application\Model\Event as EventModel;
-//use JackAssPHP\Helper\HtmlPage as JaHt;
 
 class Loot extends \JackAssPHP\Core\Controller
 {
