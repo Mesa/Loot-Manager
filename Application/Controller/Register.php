@@ -27,7 +27,8 @@ class Register extends \JackAssPHP\Core\Controller
         $page = \Factory::getHtmlResponse();
         $page->setTemplate("Layout.html");
         $template = \Factory::getView();
-        if ( isset($_SESSION["registered"]) and $_SESSION["registered"] == true ) {
+        
+        if (isset($_SESSION["registered"]) and $_SESSION["registered"] == true) {
             $page->setTitle($this->registry->get("GUILD_NAME") . " - Already Registered");
             $page->addToContent($template->load("Register/alreadyRegistered"));
         } elseif ($rights->hasRight("REGISTER")) {
@@ -45,7 +46,7 @@ class Register extends \JackAssPHP\Core\Controller
                 $captcha->redirect();
             }
         } else {
-//            echo $template->load("Error/noRights");
+            throw new \RightException("REGISTER");
         }
     }
 
@@ -65,8 +66,7 @@ class Register extends \JackAssPHP\Core\Controller
                 }
             }
         } else {
-            $template = \Factory::getView();
-            echo $template->load("Error/noRights");
+            throw new \RightException("REGISTER");
         }
     }
 
@@ -75,7 +75,7 @@ class Register extends \JackAssPHP\Core\Controller
 
         if ($rights->hasRight("REGISTER")) {
             $captcha = new \JackAssPHP\Core\Captcha();
-            if ( $captcha->hasVerified()) {
+            if ($captcha->hasVerified()) {
                 $email = strip_tags($_POST["email"]);
                 $user_dao = new \Application\Model\User();
                 $result = $user_dao->emailExists($email);

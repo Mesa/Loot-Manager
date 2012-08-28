@@ -276,13 +276,11 @@ h3.headline, h2.headline, h1.headline {
     border: 1px solid orange;
     padding: 5px 5px 5px 35px;
     color: black;
-    background-image: url(<?php echo $web_root ?>error.png);
     background-repeat: no-repeat;
     background-position: 10px center;
 }
 
 .javascript-message {
-    background-image: url(<?php echo $web_root?>opacity_dark.png);
     border: 1px solid black;
     color: white;
     margin-bottom: 5px;

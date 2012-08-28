@@ -501,9 +501,9 @@
         <string>Die Eingabe war leer.</string>
     </chunk>
     <chunk>
-        <key>CAPTCHA_PRE_TEXT</key>
-        <string>Um weitere Eingaben machen zu können, musst du zuerst die zwei
-        Worte aus dem Bild in das Feld eingeben.</string>
+        <key>CAPTCHA_INFO_TEXT</key>
+        <string>Gibt beide Wörter aus dem Bild ein und trenne diese mit einem Leerzeichen.
+        Lade das Captcha einfach neu, wenn du ein Wort nicht lesen kannst.</string>
     </chunk>
     <chunk>
         <key>VERIFY_EMAIL</key>
@@ -832,5 +832,9 @@
     <chunk>
         <key>CHANGE_STATE</key>
         <string>Status ändern</string>
+    </chunk>
+    <chunk>
+        <key>RE_CAPTCHA_TITLE</key>
+        <string>Bestätigungscode</string>
     </chunk>
 </root>

@@ -645,4 +645,12 @@
         <key>CHANGE_STATE</key>
         <string>change state</string>
     </chunk>
+    <chunk>
+        <key>CAPTCHA_INFO_TEXT</key>
+        <string>Enter both words below, separeted by a space. If you cant read this, reload the captcha.</string>
+    </chunk>
+    <chunk>
+        <key>RE_CAPTCHA_TITLE</key>
+        <string></string>
+    </chunk>
 </root>
