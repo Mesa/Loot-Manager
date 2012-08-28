@@ -54,8 +54,6 @@ class Rights extends \JackAssPHP\Core\Controller
             $page->addJavascript($template->load("Rights/rights.js"));
             $page->addStyleSheet($template->load("Rights/css"));
 
-
-            $select_menu = \Factory::getView();
             $content = \Factory::getView();
 
             $template->rights = $this->rights;
@@ -86,9 +84,7 @@ class Rights extends \JackAssPHP\Core\Controller
             $page->addToContent($content->load("Rights/content"));
 
         } else {
-            /**
-             * @todo add Exception
-             */
+            throw new \RightException("rights_access_dashboard");
         }
     }
 
@@ -138,9 +134,7 @@ class Rights extends \JackAssPHP\Core\Controller
                 echo "Wrong Parameter";
             }
         } else {
-            /**
-             * @todo add Exception
-             */
+             throw new \RightException("rights_edit_user_rights");
         }
     }
 
@@ -161,9 +155,7 @@ class Rights extends \JackAssPHP\Core\Controller
             $rights = new RightsModel();
             $rights->setUserRight($user_id, $right_name);
         } else {
-            /**
-             * @todo add Exception
-             */
+            throw new \RightException("rights_edit_user_rights");
         }
     }
 
@@ -183,9 +175,7 @@ class Rights extends \JackAssPHP\Core\Controller
             $rights = new RightsModel();
             $rights->setGroupRight($group_id, $right_name);
         } else {
-            /**
-             * @todo add Exception
-             */
+            throw new \RightException("rights_edit_group_rights");
         }
     }
 
@@ -205,9 +195,7 @@ class Rights extends \JackAssPHP\Core\Controller
             $rights = new RightsModel();
             $rights->deleteGroupRight($group_id, $right_name);
         } else {
-            /**
-             * @todo add Exception
-             */
+            throw new \RightException("rights_edit_group_rights");
         }
     }
 
@@ -224,9 +212,7 @@ class Rights extends \JackAssPHP\Core\Controller
             $rights = new RightsModel();
             $rights->deleteUserRight($user_id, $right_name);
         } else {
-            /**
-             * @todo add Exception
-             */
+            throw new \RightException("rights_edit_user_rights");
         }
     }
 
