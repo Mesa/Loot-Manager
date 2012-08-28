@@ -43,8 +43,8 @@
                 </div>
             <?php if ( $this->rights->hasRight("REGISTER")): ?>
                 <div>
-                    <a id="register" href="<?php echo $this->registry->get("WEB_ROOT")?>register/"><?php echo $lang->translate("register");?></a>&nbsp;&nbsp;&nbsp;
-                    <a id="register" href="<?php echo $this->registry->get("WEB_ROOT")?>password_recovery/"><?php echo $lang->translate("LOST_PASSWORD");?></a>
+                    <a id="recover_password" href="<?php echo $this->registry->get("WEB_ROOT")?>password_recovery/"><?php echo $lang->translate("LOST_PASSWORD");?></a><br/><br/>
+                    <a id="register" href="<?php echo $this->registry->get("WEB_ROOT")?>register/"><?php echo $lang->translate("register");?></a>
 
                 </div>
             <?php endif; ?>

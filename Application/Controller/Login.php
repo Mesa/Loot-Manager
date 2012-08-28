@@ -28,6 +28,9 @@ class Login extends \JackAssPHP\Core\Controller
         ) {
 
             $html = \Factory::getView();
+            /**
+             * @todo remove Singleton pattern
+             */
             $form_token = JaFo::getInstance();
             $html->form_token = $form_token->getToken();
             $_SESSION["username_input_salt"] = $form_token->generateSalt(10);
@@ -49,10 +52,13 @@ class Login extends \JackAssPHP\Core\Controller
 
     public function checkLogin ( $arg )
     {
-        $user = \Factory::getUser();
+        $user       = \Factory::getUser();
+        /**
+         * @todo remove Singleton pattern
+         */
         $form_token = JaFo::getInstance();
-        $blacklist = \Factory::getBlackList();
-        $registry = \Factory::getRegistry();
+        $blacklist  = \Factory::getBlackList();
+        $registry   = \Factory::getRegistry();
 
         if ($form_token->checkToken($arg["token"]) === true
             && $user->isLoggedIn() == false
