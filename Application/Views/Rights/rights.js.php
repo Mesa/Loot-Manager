@@ -553,7 +553,7 @@ function getRightsFrame( button ) {
         get_option = "u";
     }
 
-    right_frame = $(right_frame_id);
+    right_frame = $("#" + right_frame_id);
 
     if ( right_frame.length > 0 ) {
         right_frame.remove();
