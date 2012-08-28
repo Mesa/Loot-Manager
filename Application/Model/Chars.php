@@ -300,8 +300,9 @@ class Chars extends \JackAssPHP\Core\DataModel
         $request->execute();
 
         $result = $request->fetchAll();
-
-        foreach ( $result as $key => $value ) {
+        
+        $list = array();
+        foreach ($result as $key => $value) {
             $list[] = $value["Class"];
         }
         return $list;
