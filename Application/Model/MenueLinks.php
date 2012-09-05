@@ -89,19 +89,16 @@ class MenueLinks extends \JackAssPHP\Core\DataModel
         $request->bindValue(":name", $name, \PDO::PARAM_STR);
         $request->bindValue(":path", $path, \PDO::PARAM_STR);
         $request->bindValue(":order", $last_order, \PDO::PARAM_INT);
-        $request->execute();
-        /**
-         * @todo im Fehlerfall den Fehler zurückgeben ansonsten true.
-         */
+        return $request->execute();
     }
 
-    public function getLastOrder ( ) {
+    public function getLastOrder () 
+    {
         $request = $this->getStatement("SELECT `Order` FROM `$this->table_name` ORDER BY `Order` DESC LIMIT 1");
         $request->execute();
 
         $order = $request->fetch();
         return (int) $order["Order"] + 1;
-
     }
 
     /**
@@ -120,20 +117,16 @@ class MenueLinks extends \JackAssPHP\Core\DataModel
 
         $request->bindValue(":name", $name, \PDO::PARAM_STR);
         $request->bindValue(":id", $id, \PDO::PARAM_INT);
-        $request->execute();
-        /**
-         * @todo im Fehlerfall den Fehler zurückgeben ansonsten true.
-         */
+        return $request->execute();
     }
 
-    public function updateRight ( $id, $right) {
+    public function updateRight ( $id, $right ) {
         $request = $this->getStatement(
             "UPDATE `$this->table_name` SET `Right` = :right WHERE `Id` = :id"
         );
         $request->bindValue(":id", $id);
         $request->bindValue(":right", $right);
-        $request->execute();
-
+        return $request->execute();
     }
     /**
      * Update Path Info of Item identified by Id
@@ -151,10 +144,7 @@ class MenueLinks extends \JackAssPHP\Core\DataModel
 
         $request->bindValue(":id", $id, \PDO::PARAM_INT);
         $request->bindValue(":path", $path, \PDO::PARAM_STR);
-        $request->execute();
-        /**
-         * @todo im Fehlerfall den Fehler zurückgeben ansonsten true.
-         */
+        return $request->execute();
     }
 
     /**
@@ -168,10 +158,7 @@ class MenueLinks extends \JackAssPHP\Core\DataModel
     {
         $request = $this->getStatement("DELETE FROM `$this->table_name` WHERE `Id` = :id");
         $request->bindValue(":id", $id, \PDO::PARAM_INT);
-        $request->execute();
-        /**
-         * @todo im Fehlerfall den Fehler zurückgeben ansonsten true.
-         */
+        return $request->execute();
     }
 
     /**
@@ -188,9 +175,6 @@ class MenueLinks extends \JackAssPHP\Core\DataModel
         $request = $this->getStatement(
             "UPDATE `$this->table_name` SET `Order` = :order WHERE `Id` = :id"
         );
-
-        $position = (int) 0;
-        $id = null;
 
         $request->bindParam(":order", $position, \PDO::PARAM_INT);
         $request->bindParam(":id", $id, \PDO::PARAM_INT);

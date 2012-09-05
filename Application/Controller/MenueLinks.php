@@ -41,9 +41,7 @@ class MenueLinks extends \JackAssPHP\Core\Controller
             $template->link_list = $dao_link->getAllLinks();
             $page->addToContent($template->load("MenueLinks/main"));
         } else {
-            /**
-             * @todo throw Exception
-             */
+            throw new \RightException("edit_menue_link");
         }
     }
 
@@ -63,9 +61,7 @@ class MenueLinks extends \JackAssPHP\Core\Controller
             $dao_link = new \Application\Model\MenueLinks();
             $dao_link->updateRight($id, $right["name"]);
         } else {
-            /**
-             * @todo throw Exception
-             */
+            throw new \RightException("edit_menue_link");
         }
     }
 
@@ -90,9 +86,7 @@ class MenueLinks extends \JackAssPHP\Core\Controller
             $dao_links = new \Application\Model\MenueLinks();
             $dao_links->updateName($id, $name);
         } else {
-            /**
-             * @todo addException
-             */
+            throw new \RightException("edit_menue_link");
         }
     }
 

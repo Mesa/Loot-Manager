@@ -27,7 +27,7 @@ class Update extends Controller
         echo "<br><hr> Update fertig";
         } else {
             /**
-             * @todo thro exception
+             * @todo throw exception
              */
             header("Location: " . $this->registry->get("WEB_ROOT"));
             echo "Du hast keine Rechte für ein Update";
