@@ -1,0 +1,33 @@
+{
+    "name": "mesa/loot-manager",
+    "type": "Guild and Loot Organizer",
+    "description": "Guild and Loot Organizer",
+    "keywords": [""],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Langemann",
+            "email": "daniel.langemann@gmx.de",
+            "homepage": "http://daniel.langemann.org",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "php": ">=5.4.0",
+        "mesa/config": "dev-master",
+        "michelf/php-markdown": "1.4.*@dev",
+        "symfony/finder": "2.5.*@dev",
+        "symfony/filesystem": "2.5.*@dev",
+        "monolog/monolog": "1.8.*@dev",
+        "mnapoli/php-di": "~4.0",
+        "altorouter/altorouter": "dev-master",
+        "twig/twig2": "1.15.*@dev",
+        "doctrine/orm": "2.3.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "/"
+        }
+    }
+}

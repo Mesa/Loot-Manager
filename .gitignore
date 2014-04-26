@@ -1,6 +1,8 @@
-/nbproject*
+nbproject/
 /mysql.ini
-/index.php
-/JackAssPHP/Logs/*
 /Application/Images/images/*
-/.htaccess
+.idea/
+System/Logs
+composer.lock
+vendor/
+.sass-cache/
