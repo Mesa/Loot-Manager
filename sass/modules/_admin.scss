@@ -1,0 +1,381 @@
+body {
+    font-family: tahoma;
+    font-size: 0.9em;
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.border_light {
+    border: 1px solid lightgrey;
+}
+
+.border_dark {
+    border: 1px solid #999999;
+}
+
+.block .headline {
+    background-color: #F0F0F0;
+}
+
+#copy , #copy a{
+    color: lightgray;
+    text-decoration: none;
+}
+.block, .player_list li {
+    box-shadow: 2px 2px 15px lightgrey;
+    -moz-box-shadow: 2px 2px 15px lightgrey;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 15px lightgrey;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    background-color: white;
+    -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(color=#AAAAAA, offx=2, offy=2)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAAAAA')";
+    /* IE 8: yes, it's ugly but it has to be on one line. :-( */
+    /*        -ms-filter: "progid:DXImageTransform.Microsoft.Chroma(color='white') progid:DXImageTransform.Microsoft.Alpha(opacity=50)";*/
+
+    /* For IE 5.5 - 7 */
+    /*    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAAAAA');*/
+}
+
+.player_list li {
+    background-color: white;
+    font-size: 0.9em;
+}
+.submenu_left, .submenu_right , #create_new_user_dialog .block,
+#create_new_group_dialog .block, #admin_edit_user .block {
+    text-align: center;
+}
+
+.submenu_left h3,.submenu_right h3 {
+    color: steelblue;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    font-size: 1em;
+}
+
+.info {
+    font-size: 0.8em;
+    color: #C0C0C0;
+}
+
+.right {
+    border: 1px solid steelblue;
+}
+
+.right h3 {
+    color: steelblue;
+    text-align: center;
+}
+
+.highlight {
+    background-color: #DDEEFF;
+    color: black;
+}
+
+.user .email, .user .groups {
+    font-size: 0.8em;
+}
+
+.user .last_login {
+    font-size: 0.75em;
+}
+
+#create_new_group_dialog textarea{
+    width: 99%;
+    height: 100px;
+}
+#create_new_user_dialog, #create_new_group_dialog {
+    font-size: 1.2em;
+}
+
+.center {
+    text-align: center;
+}
+
+#deactive_groups, #active_groups, #all_member, #active_member {
+    border: 1px solid #CCDDFF;
+}
+
+#deactive_groups h3, #active_groups h3, #all_member h3, #active_member h3 {
+    color: steelblue;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.description {
+    color: #999999;
+}
+
+.news {
+    border: 1px solid steelblue;
+}
+
+.news .date, .news .author, .news .display_from, .news .display_to {
+    /*    color: #C0C0C0;*/
+    color: #999999;
+}
+.news h3 {
+    color: red;
+}
+
+.news .content {
+    /*    font-weight: 800;*/
+}
+
+.error {
+    color: red;
+}
+
+.alignCenter {
+    text-align: center;
+}
+.news .options {
+    box-shadow: 2px 2px 15px lightgrey;
+    -moz-box-shadow: 2px 2px 15px lightgrey;
+    /*    -moz-border-radius: 4px;*/
+    -webkit-box-shadow: 2px 2px 15px lightgrey;
+    /*    -webkit-border-radius: 4px;*/
+    /*    -khtml-border-radius: 4px;*/
+    /*    border-radius: 4px;*/
+    background-color: white;
+    -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(color=#333333, offx=2, offy=2)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAAAAA')";
+    /* For IE 5.5 - 7 */
+    /*    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#AAAAAA');*/
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+#wrapper {
+    margin: 0px auto;
+    position: relative;
+}
+
+.block {
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.clear {
+    clear: both;
+}
+
+#info {
+    font-size: 0.8em;
+    padding: 0px;
+    margin: 0px;
+}
+
+.float {
+    float: left;
+    margin-right: 15px;
+}
+.hide {
+    display: none;
+}
+
+.player_list {
+    list-style-type: none;
+}
+.player_list li {
+    margin: 3px;
+    padding: 3px;
+}
+.ui-state-highlight {
+    height: 1.0em;
+    line-height: 1.0em;
+}
+
+.submenu_left {
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.submenu_right {
+    float: right;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.info {
+    margin-bottom: 25px;
+}
+
+.user_right_menu, .group_right_menu {
+    display: none;
+}
+
+.right {
+    margin: 2px;
+    width: 200px;
+    float: left;
+}
+
+#user_list {
+    width: 49%;
+    float: left;
+}
+
+.right div {
+    margin-bottom: 1px;
+    border-bottom: 1px solid #D0D0D0;
+    padding-bottom: 1px;
+}
+
+#group_list {
+    width: 49%;
+    float: right;
+}
+
+#group_list .options {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+}
+
+.group {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.group .name {
+
+}
+
+.group .description {
+
+}
+
+#char_container {
+    position: relative;
+}
+
+.char_sortable li {
+    float: left;
+    width: 150px;
+    height: 50px;
+    list-style: none;
+}
+
+.char_box {
+    float: left;
+    width: 100px;
+    height:20px;
+    overflow: hidden;
+}
+
+#user_group_manager, #create_new_user_dialog {
+    display: none;
+}
+
+.dropper, .user_dropper {
+    width: 90%;
+    border: 1px solid steelblue;
+    list-style: none;
+    text-align: center;
+    font-weight: 900;
+    margin: 3px;
+}
+
+#deactive_groups, #active_groups, #active_member, #all_member, #hidden_ranks, #active_ranks {
+    width:42%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#deactive_groups h3, #active_groups h3, #all_member h3, #active_member h3, #hidden_ranks h3, #active_ranks h3{
+    /*    padding-bottom: 5px;*/
+    height: 35px;
+}
+
+#group_member_manager #active_member, #active_ranks {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+#group_member_manager #all_member {
+    float: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.news {
+    float: left;
+    position: relative;
+    width: 30%;
+    margin: 5px;
+}
+
+.news input, .news textarea {
+    border: 0px solid white;
+}
+.news h3 {
+    margin-bottom: 15px;
+}
+
+.news .date {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+
+.news .author {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+}
+
+.addon {
+    width: 30%;
+    position: relative;
+}
+
+.news .headline {
+    margin-top: 10px;
+}
+
+.news .display_from {
+    position: absolute;
+    font-size: 0.8em;
+    top: 0px;
+    left: 20px;
+    font-weight: 900;
+}
+
+.news .display_to {
+    position: absolute;
+    font-size: 0.8em;
+    top: 0px;
+    left: 120px;
+    font-weight: 900;
+}
+
+.addon .menu_btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+#rooster_menu .auto_insert {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+</IfModule>
+
+# Hide files wich should not be serverd by the server
+<Files *.sql>
+    deny from all
+</Files>
+
+<Files *.txt>
+    deny from all
+</Files>
+
+<Files *.xml>
+    deny from all
+</Files>
+
+<Files autoloader.php>
+    deny from all
+</Files>

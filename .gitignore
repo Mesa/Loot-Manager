@@ -2,7 +2,8 @@ nbproject/
 /mysql.ini
 /Application/Images/images/*
 .idea/
-System/Logs
+log/
+cache/
 composer.lock
 vendor/
 .sass-cache/

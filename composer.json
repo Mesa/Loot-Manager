@@ -1,8 +1,8 @@
 {
-    "name": "mesa/loot-manager",
-    "type": "Guild and Loot Organizer",
-    "description": "Guild and Loot Organizer",
-    "keywords": [""],
+    "name": "mesa/commander",
+    "type": "Markdown-Blog",
+    "description": "Markdown based Blog",
+    "keywords": ["Blog", "Markdown"],
     "license": "MIT",
     "authors": [
         {
@@ -23,7 +23,8 @@
         "mnapoli/php-di": "~4.0",
         "altorouter/altorouter": "dev-master",
         "twig/twig2": "1.15.*@dev",
-        "doctrine/orm": "2.3.5"
+        "doctrine/orm": "2.3.5",
+        "swiftmailer/swiftmailer": "v5.1.0"
     },
     "autoload": {
         "psr-0": {

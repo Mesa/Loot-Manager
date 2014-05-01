@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    convertErrorsToExceptions   = "true"
+    convertNoticesToExceptions  = "true"
+    convertWarningsToExceptions = "true"
+    colors                      = "true"
+    stopOnFailure               = "false"
+    syntaxCheck                 = "true"
+    >
+    <testsuites>
+        <testsuite name="Global Commander tests">
+            <directory>../Mesa/test/</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type="coverage-html" target="coverage" />
+    </logging>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory>../Mesa/Commander/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
