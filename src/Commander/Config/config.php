@@ -21,9 +21,15 @@ return [
         "LootManager" => ROOT . "src",
         "JackAssPHP"  => ROOT . "src",
     ],
+    'twig' => [
+        'options' => [
+            'cache' => '%path.cache%/twig'
+        ]
+    ],
     'path'     => [
         'cache'      => ROOT . 'cache',
-        'controller' => ['\Commander\Controller' => new SplFileInfo(__DIR__ . '/../../Controller')]
+        'controller' => ['\Commander\Controller' => new SplFileInfo(__DIR__ . '/../Controller')],
+        'templates' => []
     ],
     'system'   => [
         'debug'           => false,

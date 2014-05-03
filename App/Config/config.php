@@ -1,3 +1,3 @@
 <?php
 
-return ["daniel" => "123"];
+return [];

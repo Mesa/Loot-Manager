@@ -9,8 +9,8 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
 return [
-    'template.path'         => [ROOT . "App/views", realpath(__DIR__ . "/../../views")],
-    'twig.options'          => [],
+    'template.path'         => "",
+    'twig.options'          => ['cache' => 'cache/twig'],
     'System'                => DI\object('Commander\Core\System'),
     'AnnotationReader'      => DI\factory(
         function (Container $c) {
@@ -49,7 +49,7 @@ return [
     'Router'                => DI\object('\AltoRouter'),
     'TwigLoader'            => DI\object('Twig_Loader_Filesystem')->constructorParameter(
                                "paths",
-                                   DI\link("template.path")
+                               DI\link("template.path")
         ),
     'Twig'                  => DI\object('\Twig_Environment')
                                ->constructorParameter("loader", DI\link("TwigLoader"))

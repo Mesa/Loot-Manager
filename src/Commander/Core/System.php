@@ -11,7 +11,6 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
 use Mesa\Config\Config;
 use Monolog\Logger;
-use Symfony\Component\Finder\Finder;
 
 /**
  * Class App
@@ -54,6 +53,7 @@ class System
     private $containerBuilder;
     private $configFiles;
     private $prepared = false;
+    private $controllerBag = array();
 
     public function __construct()
     {
@@ -95,7 +95,6 @@ class System
         $container = $this->getContainer();
         $router    = $this->getRouter();
 
-        //$this->createDoctrine();
         /**
          * @var \AltoRouter $router
          */
@@ -147,6 +146,7 @@ class System
             }
 
             $response = $container->get("Response");
+
             $response->setData($data, $match['target']['args']->view->path);
         } else {
             if ($container->has("RouteNotFoundResponse")) {
@@ -243,8 +243,11 @@ class System
 
         $this->setContainer($this->containerBuilder->build());
         $this->getContainer()->set("Config", $this->getConfig());
-        $this->loadControllerFromPath();
+        $this->getContainer()->set("template.path", $this->getConfig()->get("path.templates"));
+        $this->getContainer()->set("twig.options", $this->getConfig()->get("twig.options", ['cache' => 'cache/twig']));
         $this->getContainer()->injectOn($this);
+
+        $this->loadControllerFromPath();
     }
 
     protected function setBasePath()
@@ -253,6 +256,7 @@ class System
         if ("/" == $basePath) {
             $basePath = "";
         }
+
         $this->basePath = $basePath;
     }
 
@@ -298,11 +302,18 @@ class System
         $loader                    = new \SplClassLoader($namespace);
         $loader->setIncludePath($includePath);
 
-        $dir        = $includePath . DS . $namespace . DS;
+        $dir = $includePath . DS . $namespace . DS;
 
-        $configFile = $dir . "Config" . DS . "config_" . strtolower(ENVIRONMENT::current()) . ".php";
-        if (is_dir($dir . "Config") && file_exists($configFile)) {
-            $this->addConfig(new \SplFileInfo($configFile));
+        $configFileEnv = $dir . "Config" . DS . "config_" . strtolower(ENVIRONMENT::current()) . ".php";
+        $configFile    = $dir . "Config" . DS . "config.php";
+
+        if (is_dir($dir . "Config")) {
+            if (file_exists($configFile)) {
+                $this->addConfig(new \SplFileInfo($configFile));
+            }
+            if (file_exists($configFileEnv)) {
+                $this->addConfig(new \SplFileInfo($configFileEnv));
+            }
         }
 
         $entityPath = $dir . "Entity";
@@ -312,6 +323,20 @@ class System
 
         if (is_dir($dir . "Annotation")) {
             $this->addAnnotation('\\' . $namespace . '\Annotation', $includePath);
+        }
+
+        if (is_dir($dir . "Controller")) {
+            $controller = glob($dir . "Controller/*Controller.php");
+            foreach ($controller as $item) {
+                $this->controllerBag[$namespace] = str_replace($includePath, "", $item);
+            }
+        }
+
+        $views = $this->getConfig()->get("path.templates", []);
+
+        if (is_dir($dir . "Views")) {
+            $views[] = $dir . "Views" . DS;
+            $this->getConfig()->set('path.templates',$views);
         }
 
         $env      = strtolower(ENVIRONMENT::current());
@@ -344,79 +369,70 @@ class System
         $container = $this->getContainer();
         $routeBag  = [];
 
-        foreach ($config->get("path.controller", [realpath("../Controller")]) as $namespace => $path) {
-            if (is_string($path)) {
-                $path = new \SplFileInfo($path);
-            }
-
-            if (!$path->isDir()) {
-                return false;
-            }
+        foreach ($this->controllerBag as $namespace => $relativePath) {
 
             $methodPattern = $config->get("config.controller.methodPattern", $this->defaultMethodPattern);
-            $filePattern   = $config->get("config.controller.filePattern", $this->defaultControllerPattern);
-            $finder        = new Finder();
-            $finder
-                ->name($filePattern)
-                ->files()
-                ->in($path->getRealPath());
 
-            foreach ($finder as $controller) {
-                $className       = preg_replace('/\.php$/', '', $controller->getFilename());
-                $classReflection = new \ReflectionClass($namespace . '\\' . $className);
-                $classAnnotation = $reader->getClassAnnotation($classReflection, '\Commander\Annotation\Route');
-                $methods         = $classReflection->getMethods(\ReflectionMethod::IS_PUBLIC);
+            $search[]  = ".php";
+            $replace[] = "";
+            $search[]  = "/";
+            $replace[] = "\\";
 
-                foreach ($methods as $method) {
-                    $arguments = new \stdClass();
-                    if ($this->defaultMethodPattern == $methodPattern ||
-                        !preg_match($methodPattern, $method->name)
-                    ) {
-                        continue;
+            $namespace       = str_replace($search, $replace, $relativePath);
+            $classReflection = new \ReflectionClass($namespace);
+            $classAnnotation = $reader->getClassAnnotation($classReflection, '\Commander\Annotation\Route');
+            $methods         = $classReflection->getMethods(\ReflectionMethod::IS_PUBLIC);
+
+            foreach ($methods as $method) {
+                $arguments = new \stdClass();
+                if ($this->defaultMethodPattern == $methodPattern ||
+                    !preg_match($methodPattern, $method->name)
+                ) {
+                    continue;
+                }
+                $annotations      = $reader->getMethodAnnotations($method);
+                $arguments->route = new \stdClass();
+                $arguments->view  = new \stdClass();
+
+                foreach ($annotations as $anno) {
+                    switch (get_class($anno)) {
+                        case 'Commander\Annotation\Route':
+                            $arguments->route = $anno;
+                            break;
+                        case 'Commander\Annotation\View':
+                            if (empty($anno->path)) {
+                                $anno->path = $classReflection->getName() . '\\' . $method->name . ".twig.php";
+                            }
+                            $arguments->view = $anno;
+                            break;
+                        default:
+                            $splitNameSpace     = explode('\\', get_class($anno));
+                            $name               = strtolower(array_pop($splitNameSpace));
+                            $arguments->{$name} = $anno;
                     }
-                    $annotations      = $reader->getMethodAnnotations($method);
-                    $arguments->route = new \stdClass();
-                    $arguments->view  = new \stdClass();
-
-                    foreach ($annotations as $anno) {
-                        switch (get_class($anno)) {
-                            case 'Commander\Annotation\Route':
-                                $arguments->route = $anno;
-                                break;
-                            case 'Commander\Annotation\View':
-                                if (empty($anno->path)) {
-                                    $anno->path = $classReflection->getName() . '\\' . $method->name . ".twig.php";
-                                }
-                                $arguments->view = $anno;
-                                break;
-                            default:
-                                $splitNameSpace     = explode('\\', get_class($anno));
-                                $name               = strtolower(array_pop($splitNameSpace));
-                                $arguments->{$name} = $anno;
-                        }
-                    }
-
-                    if (!isset($arguments->route->path)) {
-                        continue;
-                    }
-
-                    $arguments->class  = $classReflection->getName();
-                    $arguments->method = $method->name;
-
-                    if (!empty($classAnnotation)) {
-                        $arguments->route->path = $classAnnotation->path . $arguments->route->path;
-                    }
-                    $routeBag[] = $arguments;
                 }
 
-                if (!empty($arguments->route->path)) {
-                    $container->set($arguments->class, \DI\object($arguments->class));
+                if (!isset($arguments->route->path)) {
+                    continue;
                 }
+
+                $arguments->class  = $classReflection->getName();
+                $arguments->method = $method->name;
+
+                if (!empty($classAnnotation)) {
+                    $arguments->route->path = $classAnnotation->path . $arguments->route->path;
+                }
+                $routeBag[] = $arguments;
+            }
+
+            if (!empty($arguments->route->path)) {
+                $container->set($arguments->class, \DI\object($arguments->class));
             }
         }
 
         $config->set("routes", $routeBag);
         $router = $this->getRouter();
+
         foreach ($routeBag as $args) {
             $router->map(
                    $args->route->method,
