@@ -248,6 +248,7 @@ class System
         $this->getContainer()->injectOn($this);
 
         $this->loadControllerFromPath();
+        $this->createDoctrine();
     }
 
     protected function setBasePath()

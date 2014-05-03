@@ -22,11 +22,10 @@ class FrontPageController
     /**
      * @Route(name="frontpage", path="/")
      * @View("frontpage.twig.html")
-     * @Role(name=Role::guest,mode=Role::read)
+     * @Role("GuestRole")
      */
     public function indexAction()
     {
-
         //$this->rights = \Factory::getRights();
         //$news     = \Factory::getView();
         //$template = \Factory::getView();

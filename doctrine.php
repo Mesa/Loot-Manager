@@ -11,6 +11,8 @@ error_reporting(-1);
 require 'vendor/autoload.php';
 require 'src/Commander/Core/bootstrap.php';
 
+$app->prepare();
+
 $em = $app->getEntityManager();
 
 $helperSet = new HelperSet(

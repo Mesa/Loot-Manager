@@ -31,6 +31,7 @@ return [
             return $cache;
         }
     ),
+    'User' => DI\object('\Commander\Core\User'),
     'AccessManager'         => DI\object('\Commander\Core\AccessManager'),
     'Logger'                => DI\factory(
         function () {

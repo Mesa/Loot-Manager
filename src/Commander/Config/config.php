@@ -13,9 +13,6 @@ return [
             'path'   => ROOT . 'db.sqlite',
             'dbname' => ''
         ],
-        'entities' => [
-            ROOT . 'App/Entity'
-        ]
     ],
     'bundles'  => [
         "LootManager" => ROOT . "src",

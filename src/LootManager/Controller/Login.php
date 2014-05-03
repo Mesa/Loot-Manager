@@ -67,8 +67,8 @@ class Login extends \JackAssPHP\Core\Controller
             $username = trim($_POST[$_SESSION["username_input_salt"]]);
             $password = trim($_POST[$_SESSION["password_input_salt"]]);
 
-            if (isset($_POST["remember_me"])
-                && $_POST["remember_me"] == "on"
+            if (isset($_POST["useCookie"])
+                && $_POST["useCookie"] == "on"
             ) {
                 $remember_me = true;
             } else {

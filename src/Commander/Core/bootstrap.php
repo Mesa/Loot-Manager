@@ -44,8 +44,8 @@ try {
 
     $app = new System();
 
-    $app->addBundle('App', realpath(ROOT));
     $app->addBundle('Commander', ROOT . "src");
+    $app->addBundle('App', realpath(ROOT));
 
 } catch (\Exception $e) {
     echo $e;
