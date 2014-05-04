@@ -1,9 +1,7 @@
-require 'bootstrap-sass'
-
 http_path = "/"
 css_dir = "web/css"
 sass_dir = "sass"
-images_dir = "img"
+images_dir = "web/img"
 javascripts_dir = "web/js"
 
 output_style = :compressed

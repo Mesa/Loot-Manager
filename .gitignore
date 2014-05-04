@@ -6,4 +6,5 @@ log/
 cache/
 composer.lock
 vendor/
-.sass-cache/
+foundation/.sass-cache/
+web/css/*

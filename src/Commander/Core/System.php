@@ -25,7 +25,6 @@ class System
     protected $commands = array();
     private $basePath;
     private $loggerName = "Logger";
-    private $defaultControllerPattern = '*Controller.php';
     private $defaultMethodPattern = '/.*/';
     /**
      * @Inject
@@ -54,33 +53,13 @@ class System
     private $configFiles;
     private $prepared = false;
     private $controllerBag = array();
+    private $webRoot;
 
     public function __construct()
     {
         $this->config           = new Config();
         $this->containerBuilder = new ContainerBuilder();
         $this->containerBuilder->useAutowiring(true);
-    }
-
-    /**
-     * @param array $dir
-     */
-    public function addEntityDir($dir)
-    {
-        $this->entityDirs[] = $dir;
-    }
-
-    /**
-     * @return array
-     */
-    public function getEntityDirs()
-    {
-        return $this->entityDirs;
-    }
-
-    public function addServiceFile($path)
-    {
-        $this->containerBuilder->addDefinitions($path);
     }
 
     /**
@@ -91,9 +70,9 @@ class System
         if (!$this->prepared) {
             $this->prepare();
         }
-
         $container = $this->getContainer();
         $router    = $this->getRouter();
+
 
         /**
          * @var \AltoRouter $router
@@ -158,70 +137,6 @@ class System
         return $response;
     }
 
-    protected function createDoctrine()
-    {
-        $isDevMode = $this->getConfig()->get("doctrine.devMode", false);
-        $dbParams  = $this->getConfig()->get("doctrine.params", []);
-        $config    = Setup::createAnnotationMetadataConfiguration($this->getEntityDirs(), $isDevMode);
-        $config->setQueryCacheImpl($this->getContainer()->get("DoctrineCache"));
-        $config->setAutoGenerateProxyClasses(true);
-        $manager = EntityManager::create($dbParams, $config);
-        $this->getContainer()->set("EntityManager", $manager);
-
-        return $manager;
-    }
-
-    public function getEntityManager()
-    {
-        if (empty($this->entityManager)) {
-            $this->entityManager = $this->createDoctrine();
-        }
-
-        return $this->entityManager;
-    }
-
-    /**
-     * @return \DI\Container
-     */
-    public function getContainer()
-    {
-        return $this->container;
-    }
-
-    /**
-     * @param $dic
-     */
-    public function setContainer($dic)
-    {
-        $this->container = $dic;
-    }
-
-    /**
-     * @return \AltoRouter
-     */
-    public function getRouter()
-    {
-        return $this->router;
-    }
-
-    /**
-     * @param \AltoRouter $router
-     */
-    public function setRouter($router)
-    {
-        $this->router = $router;
-    }
-
-    /**
-     * @param \Exception $message
-     *
-     * @return void
-     */
-    public function createErrorResponse(\Exception $message)
-    {
-        echo $message;
-    }
-
     /**
      *
      */
@@ -247,30 +162,28 @@ class System
         $this->getContainer()->set("twig.options", $this->getConfig()->get("twig.options", ['cache' => 'cache/twig']));
         $this->getContainer()->injectOn($this);
 
+        $twig = $this->getContainer()->get("Twig");
+        $twig->addGlobal("Config", $this->getConfig());
+        $twig->addGlobal("ROOT", $this->webRoot);
+        $twig->addGlobal("Router", $this->getRouter());
         $this->loadControllerFromPath();
         $this->createDoctrine();
     }
 
     protected function setBasePath()
     {
-        $basePath = dirname($_SERVER["PHP_SELF"]);
+        $basePath = substr($_SERVER['PHP_SELF'], 0, strpos($_SERVER["PHP_SELF"], "index.php") - 1);
+        $protocol = (!isset($_SERVER['HTTPS'])) ? 'http://' : 'https://';
+        $folder   = $protocol . $_SERVER['HTTP_HOST'] . $basePath;
+        if (substr($folder, -1) != "/") {
+            $folder .= "/";
+        }
+        $this->webRoot = $folder;
         if ("/" == $basePath) {
             $basePath = "";
         }
 
         $this->basePath = $basePath;
-    }
-
-    /**
-     * @param \SplFileInfo $file
-     *
-     * @return $this
-     */
-    public function addConfig(\SplFileInfo $file)
-    {
-        $this->configFiles[] = $file;
-
-        return $this;
     }
 
     /**
@@ -337,7 +250,7 @@ class System
 
         if (is_dir($dir . "Views")) {
             $views[] = $dir . "Views" . DS;
-            $this->getConfig()->set('path.templates',$views);
+            $this->getConfig()->set('path.templates', $views);
         }
 
         $env      = strtolower(ENVIRONMENT::current());
@@ -350,12 +263,53 @@ class System
     }
 
     /**
+     * @param \SplFileInfo $file
+     *
+     * @return $this
+     */
+    public function addConfig(\SplFileInfo $file)
+    {
+        $this->configFiles[] = $file;
+
+        return $this;
+    }
+
+    /**
+     * @param array $dir
+     */
+    public function addEntityDir($dir)
+    {
+        $this->entityDirs[] = $dir;
+    }
+
+    /**
      * @param $namespace
      * @param $path
      */
     protected function addAnnotation($namespace, $path)
     {
         AnnotationRegistry::registerAutoloadNamespace($namespace, $path);
+    }
+
+    public function addServiceFile($path)
+    {
+        $this->containerBuilder->addDefinitions($path);
+    }
+
+    /**
+     * @return \DI\Container
+     */
+    public function getContainer()
+    {
+        return $this->container;
+    }
+
+    /**
+     * @param $dic
+     */
+    public function setContainer($dic)
+    {
+        $this->container = $dic;
     }
 
     /**
@@ -452,6 +406,62 @@ class System
     public function getAnnotationReader()
     {
         return $this->getContainer()->get("AnnotationReader");
+    }
+
+    /**
+     * @return \AltoRouter
+     */
+    public function getRouter()
+    {
+        return $this->router;
+    }
+
+    /**
+     * @param \AltoRouter $router
+     */
+    public function setRouter($router)
+    {
+        $this->router = $router;
+    }
+
+    protected function createDoctrine()
+    {
+        $isDevMode = $this->getConfig()->get("doctrine.devMode", false);
+        $dbParams  = $this->getConfig()->get("doctrine.params", []);
+        $config    = Setup::createAnnotationMetadataConfiguration($this->getEntityDirs(), $isDevMode);
+        $config->setQueryCacheImpl($this->getContainer()->get("DoctrineCache"));
+        $config->setAutoGenerateProxyClasses(true);
+        $manager = EntityManager::create($dbParams, $config);
+        $this->getContainer()->set("EntityManager", $manager);
+
+        return $manager;
+    }
+
+    /**
+     * @return array
+     */
+    public function getEntityDirs()
+    {
+        return $this->entityDirs;
+    }
+
+    public function getEntityManager()
+    {
+        if (empty($this->entityManager)) {
+            $this->entityManager = $this->createDoctrine();
+        }
+
+        return $this->entityManager;
+    }
+
+    /**
+     * @param \Exception $message
+     *
+     * @return void
+     */
+    public function createErrorResponse(\Exception $message)
+    {
+        echo $message;
     }
 
     /**
